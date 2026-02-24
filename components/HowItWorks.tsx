@@ -9,24 +9,24 @@ const steps = [
     icon: Search,
     title: "We Understand Your Business",
     description:
-      "We dive deep into your business, audience, and goals. We audit your current setup and identify exactly where AI automation and a new website can generate the most impact.",
-    chips: ["Discovery Call", "Business Audit", "Goal Mapping"],
+      "We audit your current setup and identify precisely where intelligent automation and AI systems can generate the highest impact for your business — from lead capture to CRM automation.",
+    chips: ["Discovery Call", "Business Audit", "Automation Roadmap"],
   },
   {
     number: "02",
     icon: Cpu,
-    title: "We Build Your System",
+    title: "We Build Your AI Automation System",
     description:
-      "Our team designs, develops, and deploys your website and AI automation stack — chatbots, WhatsApp flows, lead capture forms, and backend integrations — all in one cohesive system.",
-    chips: ["Custom Design", "AI Integration", "Testing & QA"],
+      "Our team designs, develops, and deploys your complete business automation system — AI chatbots, WhatsApp AI bots, voice agents, lead generation automation, and CRM integration — all in one cohesive stack.",
+    chips: ["AI Integration", "WhatsApp Bot Setup", "Testing & QA"],
   },
   {
     number: "03",
     icon: Rocket,
-    title: "You Get More Leads Automatically",
+    title: "Your Business Generates Leads Automatically",
     description:
-      "Your system goes live and starts working for you around the clock. Leads come in, conversations are automated, and your calendar fills up — without lifting a finger.",
-    chips: ["Go Live", "24/7 Automation", "Ongoing Support"],
+      "Your intelligent automation system goes live and works for you 24/7. Leads come in, conversations are automated, CRM updates instantly, and your calendar fills — without lifting a finger.",
+    chips: ["Go Live in 48h", "24/7 AI Automation", "Ongoing Support"],
   },
 ];
 
@@ -44,12 +44,12 @@ export default function HowItWorks() {
         >
           <span className="section-label">Our Process</span>
           <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-white tracking-tight leading-[1.1]">
-            Simple. Smart.
+            How Our Business
             <br />
-            <span className="gradient-text">Scalable.</span>
+            <span className="gradient-text">Automation System Works</span>
           </h2>
           <p className="mt-4 text-white/45 text-base max-w-md mx-auto">
-            From discovery to deployment in days — not months.
+            From discovery to a fully deployed AI automation system — in days, not months.
           </p>
         </motion.div>
 

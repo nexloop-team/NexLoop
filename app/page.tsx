@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import KeywordServices from "@/components/KeywordServices";
 import HowItWorks from "@/components/HowItWorks";
 import Benefits from "@/components/Benefits";
 import UseCases from "@/components/UseCases";
@@ -15,6 +16,8 @@ export default function Home() {
       <Hero />
       <div className="separator mx-auto max-w-5xl" />
       <Services />
+      <div className="separator mx-auto max-w-5xl" />
+      <KeywordServices />
       <div className="separator mx-auto max-w-5xl" />
       <HowItWorks />
       <div className="separator mx-auto max-w-5xl" />

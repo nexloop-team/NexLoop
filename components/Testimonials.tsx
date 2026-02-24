@@ -10,7 +10,7 @@ const testimonials = [
     company: "Prime Realty Group",
     avatar: "MT",
     quote:
-      "NexLoop completely transformed how we capture leads. Our WhatsApp bot now qualifies buyers 24/7, and we went from 12 to 40+ showings per month in under 8 weeks.",
+      "NexLoop's WhatsApp AI bot completely transformed how we capture leads. It qualifies buyers 24/7 automatically — we went from 12 to 40+ showings per month in under 8 weeks. This is intelligent automation that actually works.",
     stars: 5,
     metric: "+230% leads",
   },
@@ -20,7 +20,7 @@ const testimonials = [
     company: "ClearWell Health",
     avatar: "PN",
     quote:
-      "NexLoop built us an AI booking system that cut no-shows by 40% and handles all our FAQs instantly. Our front desk now focuses on patients, not the phone.",
+      "NexLoop built us a full AI automation system — chatbot, booking flow, and CRM sync. It cut no-shows by 40% and handles all our patient FAQs instantly. Our front desk now focuses on patients, not the phone.",
     stars: 5,
     metric: "-40% no-shows",
   },
@@ -30,7 +30,7 @@ const testimonials = [
     company: "Momentum Coaching",
     avatar: "JL",
     quote:
-      "My website used to be a digital brochure. Now it's a lead machine. I'm consistently booking 15+ discovery calls a week without running ads.",
+      "My website used to be a digital brochure. With NexLoop's lead generation automation it's now a lead machine. I consistently book 15+ discovery calls a week without running ads. Best AI automation investment I've made.",
     stars: 5,
     metric: "15+ calls/week",
   },
@@ -50,10 +50,13 @@ export default function Testimonials() {
         >
           <span className="section-label">Testimonials</span>
           <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-white tracking-tight leading-[1.1]">
-            Businesses That
+            Real Results from
             <br />
-            <span className="gradient-text">Chose to Grow</span>
+            <span className="gradient-text">Real Businesses</span>
           </h2>
+          <p className="mt-4 text-white/45 text-base max-w-lg mx-auto">
+            Modern businesses across real estate, healthcare, and coaching trust NexLoop&apos;s AI automation systems to drive measurable growth.
+          </p>
         </motion.div>
 
         {/* Cards */}

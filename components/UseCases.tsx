@@ -21,9 +21,9 @@ const useCases: UseCase[] = [
     label: "Real Estate",
     title: "Turn Every Inquiry into a Showing",
     description:
-      "Real estate agents and agencies use NexLoop to capture buyer/seller leads 24/7, auto-qualify them via AI chat, and book viewings on autopilot — all while you focus on closing deals.",
-    outcomes: ["Auto-qualify buyer intent", "Schedule property showings", "WhatsApp drip follow-ups", "Property listing pages"],
-    tools: ["AI Chatbot", "WhatsApp Bot", "Booking System", "CRM Sync"],
+      "Real estate agents and agencies use NexLoop's AI automation services to capture buyer and seller leads 24/7, auto-qualify them via AI chatbot, and book property viewings automatically — freeing you to focus on closing deals.",
+    outcomes: ["AI-qualify buyer intent", "Auto-schedule viewings", "WhatsApp AI bot follow-ups", "SEO property listing pages"],
+    tools: ["AI Chatbot Automation", "WhatsApp AI Bot", "Booking System", "CRM Automation"],
   },
   {
     id: "clinics",
@@ -31,9 +31,9 @@ const useCases: UseCase[] = [
     label: "Clinics",
     title: "Fill Your Schedule, Reduce No-Shows",
     description:
-      "Medical clinics and wellness centers automate appointment booking, patient FAQs, and reminder sequences — reducing admin workload by 60% while improving patient satisfaction.",
-    outcomes: ["Online appointment booking", "Automated reminders", "Patient FAQ bot", "Review collection system"],
-    tools: ["Voice Agent", "WhatsApp Bot", "Booking Flow", "Feedback System"],
+      "Medical clinics and wellness centres deploy NexLoop's intelligent automation systems to handle appointment booking, patient FAQs, and reminder sequences — cutting admin workload by 60% while improving patient satisfaction.",
+    outcomes: ["Online appointment booking", "Automated reminders", "AI-powered patient FAQ bot", "Review collection automation"],
+    tools: ["AI Voice Agent", "WhatsApp AI Bot", "Booking Flow", "CRM Automation"],
   },
   {
     id: "coaching",
@@ -41,19 +41,19 @@ const useCases: UseCase[] = [
     label: "Coaching",
     title: "Sell Your Expertise While You Sleep",
     description:
-      "Coaches and consultants use NexLoop to build authority websites, run discovery call funnels, and nurture prospects with AI-powered email and WhatsApp sequences.",
-    outcomes: ["Discovery call funnels", "Automated email sequences", "Lead magnet delivery", "Community building tools"],
-    tools: ["Landing Pages", "AI Follow-up", "Booking System", "Email Flows"],
+      "Coaches and consultants use NexLoop's lead generation automation to build authority websites, run discovery call funnels, and nurture prospects with AI-powered email and WhatsApp sequences — all on autopilot.",
+    outcomes: ["Discovery call funnels", "Automated email sequences", "Lead magnet delivery", "Conversational AI nurture"],
+    tools: ["Landing Pages", "Lead Generation Automation", "Booking System", "CRM Automation"],
   },
   {
     id: "agencies",
     icon: Briefcase,
     label: "Agencies",
-    title: "Scale Client Delivery with AI",
+    title: "Scale Client Delivery with AI Automation",
     description:
-      "Marketing and service agencies use NexLoop to build lead gen systems for clients, automate reporting, and offer AI services as a recurring revenue stream.",
-    outcomes: ["White-label AI solutions", "Client reporting dashboards", "Lead gen as a service", "Scalable delivery systems"],
-    tools: ["White-label Setup", "Client Portal", "AI Workflows", "Analytics"],
+      "Marketing and service agencies use NexLoop to build AI automation systems for clients, automate reporting, and offer business automation services as a recurring revenue stream — all white-labelled.",
+    outcomes: ["White-label AI automation", "Client reporting dashboards", "Lead gen automation as a service", "Scalable business systems"],
+    tools: ["White-label Setup", "Client Portal", "AI Automation Workflows", "Analytics"],
   },
 ];
 
@@ -74,10 +74,13 @@ export default function UseCases() {
         >
           <span className="section-label">Use Cases</span>
           <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-white tracking-tight leading-[1.1]">
-            Built for Every
+            AI Automation Across
             <br />
-            <span className="gradient-text">Growth-Focused Business</span>
+            <span className="gradient-text">Every Industry</span>
           </h2>
+          <p className="mt-4 text-white/45 text-base max-w-lg mx-auto">
+            Our intelligent automation systems are tailored to the unique needs of every modern business — from real estate to clinics to agencies.
+          </p>
         </motion.div>
 
         {/* Tab Switcher */}
@@ -150,7 +153,7 @@ export default function UseCases() {
 
                 <div>
                   <h4 className="text-xs font-semibold text-white/30 uppercase tracking-widest mb-3">
-                    Tools Deployed
+                    AI Tools Deployed
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {activeCase.tools.map((t) => (

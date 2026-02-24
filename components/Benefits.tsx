@@ -7,32 +7,32 @@ const benefits = [
   {
     icon: TrendingUp,
     title: "3x More Leads",
-    description: "Automated systems work around the clock to capture and qualify leads from every channel.",
+    description: "AI automation systems work 24/7 to capture and qualify leads from every channel — website, WhatsApp, and voice.",
   },
   {
     icon: Clock,
-    title: "24/7 Automation",
-    description: "Your AI never sleeps. It responds, qualifies, and books — while you rest or focus on growth.",
+    title: "24/7 Intelligent Automation",
+    description: "Your AI never sleeps. It responds, qualifies, books, and follows up — while you focus on what matters most.",
   },
   {
     icon: DollarSign,
-    title: "Increased Revenue",
-    description: "Higher conversion rates and faster follow-up mean more closed deals and better ROI.",
+    title: "Measurable Revenue Growth",
+    description: "Faster follow-up, higher conversion rates, and automated pipelines mean more closed deals and better ROI for modern businesses.",
   },
   {
     icon: Users,
     title: "Better Customer Experience",
-    description: "Instant, personalized responses delight prospects and build trust before the first call.",
+    description: "Instant, personalized AI responses build trust before the first call — supporting every stage of the customer journey.",
   },
   {
     icon: ShieldCheck,
-    title: "Save 10+ Hours/Week",
-    description: "Eliminate repetitive tasks. Automating intake, follow-up, and FAQs saves hours every week.",
+    title: "Save 10+ Hours Per Week",
+    description: "Eliminate repetitive admin tasks. AI automation handles intake, FAQ, follow-up, and CRM updates in seconds.",
   },
   {
     icon: BarChart3,
-    title: "Data-Driven Insights",
-    description: "Real-time dashboards show where leads come from, what converts, and where to optimize.",
+    title: "Data-Driven AI Insights",
+    description: "Real-time dashboards reveal where leads come from, what converts, and where to optimize your automation strategy.",
   },
 ];
 
@@ -50,13 +50,13 @@ export default function Benefits() {
         >
           <span className="section-label">Benefits</span>
           <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-white tracking-tight leading-[1.1]">
-            Why Businesses Choose
+            Why Growth-Focused Businesses
             <br />
-            <span className="gradient-text">NexLoop</span>
+            <span className="gradient-text">Choose NexLoop</span>
           </h2>
           <p className="mt-4 text-white/45 text-base max-w-xl mx-auto">
-            Discover how AI automation enhances efficiency, reduces costs, and
-            drives growth with smarter processes.
+            From AI chatbot automation to full business automation systems — NexLoop delivers
+            measurable results from day one.
           </p>
         </motion.div>
 

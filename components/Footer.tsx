@@ -27,7 +27,7 @@ const socials = [
   { icon: Twitter, href: "#", label: "Twitter" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Mail, href: "mailto:hello@orbitwin.com", label: "Email" },
+  { icon: Mail, href: "mailto:hello@nexloop.app", label: "Email" },
 ];
 
 const ticker = [
@@ -80,9 +80,9 @@ export default function Footer() {
               NexLoop builds AI automation systems and high-converting
               websites that grow your business on autopilot.
             </p>
-            <a href="mailto:hello@orbitwin.com" className="flex items-center gap-2 text-xs text-white/35 hover:text-white/60 transition-colors">
+            <a href="mailto:hello@nexloop.app" className="flex items-center gap-2 text-xs text-white/35 hover:text-white/60 transition-colors">
               <Mail size={12} />
-              hello@orbitwin.com
+              hello@nexloop.app
             </a>
             <div className="flex gap-2.5 mt-5">
               {socials.map((s) => (

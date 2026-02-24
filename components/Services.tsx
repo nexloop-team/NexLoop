@@ -5,38 +5,38 @@ import { Bot, Globe, BarChart3, Clock, ArrowUpRight } from "lucide-react";
 
 const features = [
   {
-    tag: "AI Assistant",
-    title: "Delegate Daily Tasks",
+    tag: "AI Chatbot Automation",
+    title: "Replace Repetitive Tasks with AI",
     description:
-      "From managing calendars to drafting emails and summarizing meetings, our AI assistants work around the clock to keep your business running smarter and faster.",
-    chips: ["Summaries", "Scheduling", "Many more"],
+      "Deploy conversational AI systems that handle customer queries, qualify leads, schedule appointments, and send follow-ups — around the clock. Our AI chatbot automation integrates directly into your existing workflows.",
+    chips: ["Chatbot Automation", "Scheduling", "FAQ Handling"],
     icon: Bot,
     mockup: "chat",
   },
   {
-    tag: "Sales & Marketing",
-    title: "Accelerate Sales Growth",
+    tag: "Lead Generation Automation",
+    title: "Turn Traffic into Pipeline — Automatically",
     description:
-      "AI tools for lead generation, personalized outreach, and automated content creation that scales your sales efforts and builds stronger brand presence.",
-    chips: ["Leads", "Content", "Social post"],
+      "AI-powered lead capture and nurture systems that engage every visitor, qualify intent in real time, and push warm leads into your CRM automatically. Built for modern businesses that demand measurable ROI.",
+    chips: ["Lead Capture", "AI Qualification", "CRM Sync"],
     icon: BarChart3,
     mockup: "dashboard",
   },
   {
-    tag: "Website Dev",
-    title: "High-Converting Websites",
+    tag: "Website Development",
+    title: "High-Converting Websites for Modern Businesses",
     description:
-      "We design and build blazing-fast websites engineered to convert visitors into paying customers with SEO-optimized structure and mobile-first design.",
-    chips: ["Custom design", "SEO", "Mobile-first"],
+      "We design and build blazing-fast, SEO-optimized websites engineered to convert visitors into paying customers — with mobile-first design, structured data, and business automation systems built in from day one.",
+    chips: ["Custom Design", "SEO-Optimized", "Mobile-First"],
     icon: Globe,
     mockup: "web",
   },
   {
-    tag: "Automation",
-    title: "24/7 Automated Workflows",
+    tag: "CRM & Workflow Automation",
+    title: "Run Your Business on Autopilot",
     description:
-      "Set up intelligent automation pipelines that run while you sleep — capturing leads, sending follow-ups, and updating your CRM without any manual effort.",
-    chips: ["WhatsApp", "CRM sync", "Triggers"],
+      "Intelligent automation pipelines that work while you sleep — capturing leads, sending follow-ups, syncing your CRM, and triggering next steps without any manual effort. The backbone of every modern business automation system.",
+    chips: ["WhatsApp Automation", "CRM Automation", "Auto-Triggers"],
     icon: Clock,
     mockup: "workflow",
   },
@@ -65,13 +65,21 @@ function ChatMockup() {
             <div className="w-3 h-3 rounded-full bg-purple-500" />
           </div>
           <div className="bg-white/5 border border-white/8 rounded-xl rounded-tl-sm px-3 py-2">
-            <p className="text-xs text-white/70">What can I help with?</p>
-            <p className="text-[10px] text-white/30 mt-1">Whether you want help in customer handling or make changes in your system, just give me a command</p>
+            <p className="text-xs text-white/70">Hi! How can I help you today?</p>
+            <p className="text-[10px] text-white/30 mt-1">I can qualify leads, answer FAQs, or book a call for you — 24/7</p>
           </div>
         </div>
         <div className="flex justify-end">
           <div className="bg-purple-600/20 border border-purple-500/20 rounded-xl rounded-tr-sm px-3 py-2">
-            <p className="text-xs text-white/80">Provide me full report.</p>
+            <p className="text-xs text-white/80">Book me a discovery call.</p>
+          </div>
+        </div>
+        <div className="flex items-start gap-2">
+          <div className="w-6 h-6 rounded-full bg-purple-600/30 flex-shrink-0 flex items-center justify-center">
+            <div className="w-3 h-3 rounded-full bg-purple-500" />
+          </div>
+          <div className="bg-white/5 border border-white/8 rounded-xl rounded-tl-sm px-3 py-2">
+            <p className="text-[10px] text-white/60">✓ Call booked for Thursday 3pm. Confirmation sent.</p>
           </div>
         </div>
       </div>
@@ -81,9 +89,9 @@ function ChatMockup() {
 
 function DashboardMockup() {
   const items = [
-    { label: "Chatbot system", sub: "Efficiency will increase by 20%", color: "text-purple-400" },
-    { label: "Workflow system", sub: "Update available...", color: "text-blue-400" },
-    { label: "Sales system", sub: "Up to date", color: "text-green-400" },
+    { label: "AI Chatbot leads today", sub: "+14 new leads qualified", color: "text-purple-400" },
+    { label: "WhatsApp automation", sub: "38 messages sent automatically", color: "text-blue-400" },
+    { label: "CRM sync status", sub: "All pipelines up to date", color: "text-green-400" },
   ];
   return (
     <div className="mockup-shell h-full min-h-[180px]">
@@ -113,7 +121,7 @@ function WebMockup() {
       <div className="mockup-topbar">
         <div className="mockup-dot" /><div className="mockup-dot" /><div className="mockup-dot" />
         <div className="flex-1 h-4 bg-white/5 rounded ml-2 flex items-center px-2">
-          <span className="text-[9px] text-white/30">orbitwin.ai</span>
+          <span className="text-[9px] text-white/30">nexloop.app</span>
         </div>
       </div>
       <div className="p-4 space-y-2">
@@ -130,7 +138,7 @@ function WebMockup() {
 }
 
 function WorkflowMockup() {
-  const steps = ["Lead captured", "Email sent", "CRM updated", "Follow-up scheduled"];
+  const steps = ["Lead captured via AI", "WhatsApp message sent", "CRM updated instantly", "Follow-up scheduled"];
   return (
     <div className="mockup-shell h-full min-h-[180px] p-4">
       <div className="space-y-2">
@@ -169,13 +177,13 @@ export default function Services() {
         >
           <span className="section-label">Our Services</span>
           <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-white tracking-tight leading-[1.1]">
-            AI Solutions That
+            AI Automation Services
             <br />
-            <span className="gradient-text">Generate Results</span>
+            <span className="gradient-text">Built to Generate Results</span>
           </h2>
           <p className="mt-4 text-white/45 text-base max-w-xl mx-auto leading-relaxed">
-            We don&apos;t just build websites — we build systems that generate
-            leads automatically.
+            We don&apos;t just build websites — we deploy complete business automation systems that
+            capture leads, qualify prospects, and grow revenue on autopilot.
           </p>
         </motion.div>
 
@@ -208,7 +216,7 @@ export default function Services() {
                   ))}
                 </div>
                 <a href="#contact" className="flex items-center gap-1.5 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors w-fit group">
-                  Learn more <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  Get started <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
               </div>
 
