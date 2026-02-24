@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Loader2, CheckCircle, AlertCircle } from "lucide-react";
+import { ArrowUpRight, Loader2, CheckCircle, AlertCircle, Mail, Phone } from "lucide-react";
 
 interface FormState {
   name: string;
@@ -54,7 +54,7 @@ export default function CTA() {
     "w-full px-4 py-3 rounded-lg text-sm text-white placeholder-white/25 bg-white/[0.04] border border-white/10 focus:border-purple-500/50 focus:bg-purple-500/[0.04] focus:outline-none transition-all duration-200";
 
   return (
-    <section id="contact" className="relative py-28 px-6">
+    <section id="contact" className="relative py-16 sm:py-28 px-4 sm:px-6">
       {/* Bottom glow */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -66,12 +66,12 @@ export default function CTA() {
 
       <div className="relative max-w-5xl mx-auto">
         <div
-          className="relative glass-card overflow-hidden p-8 sm:p-12"
+          className="relative glass-card overflow-hidden p-6 sm:p-8 md:p-12"
         >
           {/* Top accent line */}
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
 
-          <div className="relative flex flex-col lg:flex-row gap-12">
+          <div className="relative flex flex-col lg:flex-row gap-8 sm:gap-12">
             {/* Left: Copy */}
             <div className="flex-1">
               <motion.div
@@ -81,7 +81,7 @@ export default function CTA() {
                 transition={{ duration: 0.6 }}
               >
                 <span className="section-label">Get Started</span>
-                <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-white tracking-tight leading-[1.1]">
+                <h2 className="mt-4 sm:mt-5 text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.1]">
                   Stop Missing Leads.
                   <br />
                   <span className="gradient-text">Start Automating.</span>
@@ -105,6 +105,28 @@ export default function CTA() {
                     </li>
                   ))}
                 </ul>
+
+                {/* Contact info */}
+                <div className="mt-8 flex flex-col gap-2.5">
+                  <a
+                    href="mailto:team.nexloop@gmail.com"
+                    className="flex items-center gap-2.5 text-sm text-white/50 hover:text-white/80 transition-colors group w-fit"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-purple-600/10 border border-purple-500/20 flex items-center justify-center group-hover:bg-purple-600/20 transition-colors">
+                      <Mail size={13} className="text-purple-400" />
+                    </div>
+                    team.nexloop@gmail.com
+                  </a>
+                  <a
+                    href="tel:+919511875269"
+                    className="flex items-center gap-2.5 text-sm text-white/50 hover:text-white/80 transition-colors group w-fit"
+                  >
+                    <div className="w-7 h-7 rounded-lg bg-purple-600/10 border border-purple-500/20 flex items-center justify-center group-hover:bg-purple-600/20 transition-colors">
+                      <Phone size={13} className="text-purple-400" />
+                    </div>
+                    +91 9511875269
+                  </a>
+                </div>
               </motion.div>
             </div>
 

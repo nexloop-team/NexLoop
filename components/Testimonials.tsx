@@ -38,7 +38,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative py-28 px-6">
+    <section className="relative py-16 sm:py-28 px-4 sm:px-6">
       <div className="relative max-w-5xl mx-auto">
         {/* Header */}
         <motion.div
@@ -46,21 +46,21 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <span className="section-label">Testimonials</span>
-          <h2 className="mt-5 text-4xl sm:text-5xl font-bold text-white tracking-tight leading-[1.1]">
+          <h2 className="mt-4 sm:mt-5 text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.1]">
             Real Results from
             <br />
             <span className="gradient-text">Real Businesses</span>
           </h2>
-          <p className="mt-4 text-white/45 text-base max-w-lg mx-auto">
+          <p className="mt-3 sm:mt-4 text-white/45 text-sm sm:text-base max-w-lg mx-auto">
             Modern businesses across real estate, healthcare, and coaching trust NexLoop&apos;s AI automation systems to drive measurable growth.
           </p>
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}
@@ -94,7 +94,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-white">{t.name}</p>
-                  <p className="text-xs text-white/35">{t.role} · {t.company}</p>
+                  <p className="text-xs text-white/45">{t.role} &middot; {t.company}</p>
                 </div>
               </div>
             </motion.div>

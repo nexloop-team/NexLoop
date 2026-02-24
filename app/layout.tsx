@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexloop.app"),
-  title: "NexLoop — AI Automation Partner for Growth-Focused Businesses",
+  title: "NexLoop | AI Automation Agency — Chatbots, Leads & Growth",
   description:
     "NexLoop builds AI automation systems — chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
   keywords: [
@@ -84,7 +85,8 @@ const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
-    email: "hello@nexloop.app",
+    email: "team.nexloop@gmail.com",
+    telephone: "+91-9511875269",
     availableLanguage: "English",
   },
   sameAs: [
@@ -183,7 +185,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased bg-black text-white">{children}</body>
+      <body className="antialiased bg-black text-white">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

@@ -14,7 +14,7 @@ const config: Config = {
         mono: ["'JetBrains Mono'", "monospace"],
       },
       colors: {
-        orbit: {
+        nexloop: {
           bg: "#03020A",
           card: "#0A0818",
           border: "#1A1535",

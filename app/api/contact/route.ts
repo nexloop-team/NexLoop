@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
 
     // In production, integrate with your email provider (Resend, SendGrid, etc.)
     // Example: await resend.emails.send({ from, to, subject, html })
-    console.log("📬 New OrbitWin Lead:", {
+    console.log("📬 New NexLoop Lead:", {
       timestamp: new Date().toISOString(),
       name,
       email,
@@ -56,5 +56,5 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET() {
-  return NextResponse.json({ status: "OrbitWin Contact API is live." });
+  return NextResponse.json({ status: "NexLoop Contact API is live." });
 }

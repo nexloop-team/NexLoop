@@ -1,6 +1,6 @@
 "use client";
 
-import { Twitter, Linkedin, Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { Twitter, Linkedin, Instagram, Mail, Phone, ArrowUpRight } from "lucide-react";
 
 const footerLinks = {
   Services: [
@@ -27,7 +27,7 @@ const socials = [
   { icon: Twitter, href: "#", label: "Twitter" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
   { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Mail, href: "mailto:hello@nexloop.app", label: "Email" },
+  { icon: Mail, href: "mailto:team.nexloop@gmail.com", label: "Email" },
 ];
 
 const ticker = [
@@ -64,8 +64,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 py-14">
-        <div className="flex flex-col lg:flex-row gap-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        <div className="flex flex-col lg:flex-row gap-10 sm:gap-12">
           {/* Brand */}
           <div className="lg:w-56 shrink-0">
             <a href="#" className="flex items-center gap-2.5 mb-4">
@@ -80,9 +80,13 @@ export default function Footer() {
               NexLoop builds AI automation systems and high-converting
               websites that grow your business on autopilot.
             </p>
-            <a href="mailto:hello@nexloop.app" className="flex items-center gap-2 text-xs text-white/35 hover:text-white/60 transition-colors">
+            <a href="mailto:team.nexloop@gmail.com" className="flex items-center gap-2 text-xs text-white/35 hover:text-white/60 transition-colors">
               <Mail size={12} />
-              hello@nexloop.app
+              team.nexloop@gmail.com
+            </a>
+            <a href="tel:+919511875269" className="flex items-center gap-2 text-xs text-white/35 hover:text-white/60 transition-colors mt-1.5">
+              <Phone size={12} />
+              +91 9511875269
             </a>
             <div className="flex gap-2.5 mt-5">
               {socials.map((s) => (
@@ -99,7 +103,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-10">
+          <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10">
             {Object.entries(footerLinks).map(([category, links]) => (
               <div key={category}>
                 <h4 className="text-xs font-semibold text-white/50 uppercase tracking-widest mb-4">
