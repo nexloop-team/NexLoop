@@ -4,7 +4,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nexloop.app"),
+  metadataBase: new URL("https://nexloop.in"),
   title: "NexLoop | AI Automation Agency — Chatbots, Leads & Growth",
   description:
     "NexLoop builds AI automation systems — chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "website development",
     "WhatsApp automation",
   ],
-  authors: [{ name: "NexLoop", url: "https://nexloop.app" }],
+  authors: [{ name: "NexLoop", url: "https://nexloop.in" }],
   creator: "NexLoop",
   publisher: "NexLoop",
   robots: {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   alternates: {
-    canonical: "https://nexloop.app",
+    canonical: "https://nexloop.in",
   },
   icons: {
     icon: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://nexloop.app",
+    url: "https://nexloop.in",
     siteName: "NexLoop",
     title: "NexLoop — AI Automation Partner for Growth-Focused Businesses",
     description:
@@ -78,8 +78,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "NexLoop",
-  url: "https://nexloop.app",
-  logo: "https://nexloop.app/icon.svg",
+  url: "https://nexloop.in",
+  logo: "https://nexloop.in/icon.svg",
   description:
     "NexLoop is an AI automation agency that builds intelligent automation systems including AI chatbots, WhatsApp bots, voice agents, lead generation systems, and CRM automation for modern businesses.",
   contactPoint: {
@@ -103,7 +103,7 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "NexLoop",
-    url: "https://nexloop.app",
+    url: "https://nexloop.in",
   },
   name: "AI Automation & Business Automation Systems",
   description:

@@ -119,7 +119,7 @@ function WebMockup() {
       <div className="mockup-topbar">
         <div className="mockup-dot" /><div className="mockup-dot" /><div className="mockup-dot" />
         <div className="flex-1 h-4 bg-white/5 rounded ml-2 flex items-center px-2">
-          <span className="text-[9px] text-white/30">nexloop.app</span>
+          <span className="text-[9px] text-white/30">nexloop.in</span>
         </div>
       </div>
       <div className="p-3 sm:p-4 space-y-2">
