@@ -9,49 +9,69 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["'Syne'", "sans-serif"],
-        body: ["'DM Sans'", "sans-serif"],
-        mono: ["'JetBrains Mono'", "monospace"],
+        display: ["'DM Sans'", "'Inter'", "sans-serif"],
+        body:    ["'Inter'", "sans-serif"],
+        mono:    ["'JetBrains Mono'", "monospace"],
       },
       colors: {
         nexloop: {
-          bg: "#03020A",
-          card: "#0A0818",
-          border: "#1A1535",
-          purple: "#7C3AED",
-          "purple-light": "#A78BFA",
-          "purple-dim": "#4C1D95",
-          blue: "#2563EB",
-          "blue-light": "#60A5FA",
-          cyan: "#06B6D4",
-          accent: "#F0ABFC",
-          text: "#E2E0FF",
-          muted: "#6B7280",
+          bg:                "var(--bg)",
+          "bg-alt":          "var(--bg-alt)",
+          card:              "var(--bg-card)",
+          border:            "var(--border)",
+          accent:            "var(--accent)",
+          "accent-light":    "var(--accent-light)",
+          "accent-subtle":   "var(--accent-subtle)",
+          fg:                "var(--fg)",
+          "fg-secondary":    "var(--fg-secondary)",
+          muted:             "var(--fg-muted)",
         },
       },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      borderRadius: {
+        DEFAULT: "var(--radius)",
+        sm:      "var(--radius-sm)",
+        xs:      "var(--radius-xs)",
       },
       animation: {
-        "float": "float 6s ease-in-out infinite",
-        "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-        "spin-slow": "spin 20s linear infinite",
-        "orbit": "orbit 8s linear infinite",
+        float:          "float 6s ease-in-out infinite",
+        "float-slow":   "float 9s ease-in-out infinite",
+        "pulse-slow":   "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        ticker:         "ticker 38s linear infinite",
+        "fade-up":      "fadeUp 0.6s cubic-bezier(0.23,1,0.32,1) both",
+        "scale-in":     "scaleIn 0.5s cubic-bezier(0.23,1,0.32,1) both",
+        "mesh-pulse":   "meshPulse 9s ease-in-out infinite",
       },
       keyframes: {
         float: {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-20px)" },
+          "50%":      { transform: "translateY(-14px)" },
         },
-        orbit: {
-          "0%": { transform: "rotate(0deg) translateX(120px) rotate(0deg)" },
-          "100%": { transform: "rotate(360deg) translateX(120px) rotate(-360deg)" },
+        ticker: {
+          "0%":   { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
         },
+        fadeUp: {
+          from: { opacity: "0", transform: "translateY(28px)" },
+          to:   { opacity: "1", transform: "translateY(0)" },
+        },
+        scaleIn: {
+          from: { opacity: "0", transform: "scale(0.92)" },
+          to:   { opacity: "1", transform: "scale(1)" },
+        },
+        meshPulse: {
+          "0%, 100%": { opacity: "0.5", transform: "scale(1)" },
+          "50%":      { opacity: "0.9", transform: "scale(1.12)" },
+        },
+      },
+      transitionTimingFunction: {
+        expo: "cubic-bezier(0.23, 1, 0.32, 1)",
+      },
+      screens: {
+        xs: "480px",
       },
     },
   },
   plugins: [],
 };
+
 export default config;

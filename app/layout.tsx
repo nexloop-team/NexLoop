@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import ThemeProvider from "@/components/ThemeProvider";
+import CustomCursor from "@/components/CustomCursor";
 import "./globals.css";
+import { DM_Sans, Inter } from "next/font/google";
+
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-display", weight: ["300","400","500","600","700","800"], display: "swap" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexloop.in"),
@@ -168,8 +174,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning data-theme="dark" className={`${dmSans.variable} ${inter.variable}`}>
       <head>
+        {/* Dark-only theme */}
         <Script
           id="schema-organization"
           type="application/ld+json"
@@ -185,8 +192,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased bg-black text-white">
-        {children}
+      <body className="antialiased">
+        <ThemeProvider>
+          <CustomCursor />
+          {children}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

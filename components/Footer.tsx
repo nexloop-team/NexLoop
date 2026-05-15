@@ -1,124 +1,190 @@
 "use client";
 
-import { Twitter, Linkedin, Instagram, Mail, Phone, ArrowUpRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { Mail, Phone, ArrowUpRight, Twitter, Linkedin, Instagram, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 const footerLinks = {
-  Services: [
-    { label: "Website Development", href: "#services" },
-    { label: "AI Automation", href: "#services" },
-    { label: "Lead Generation", href: "#services" },
-    { label: "WhatsApp Bots", href: "#services" },
-  ],
-  "Use Cases": [
-    { label: "Real Estate", href: "#" },
-    { label: "Clinics", href: "#" },
-    { label: "Coaching", href: "#" },
-    { label: "Agencies", href: "#" },
-  ],
   Company: [
-    { label: "About Us", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Privacy Policy", href: "#" },
+    { label: "Services", href: "/#services" },
+    { label: "Process", href: "/#process" },
+    { label: "Reviews", href: "/#reviews" },
+    { label: "Blog", href: "/blog" },
+    { label: "Contact", href: "/#contact" },
+  ],
+  Services: [
+    { label: "Website Development", href: "/#services" },
+    { label: "Mobile Apps", href: "/#services" },
+    { label: "AI Chatbots", href: "/#services" },
+    { label: "Lead Automation", href: "/#services" },
+    { label: "AI Voice Agents", href: "/#services" },
+  ],
+  Blog: [
+    { label: "AI Automation Guide", href: "/blog/ai-automation-guide-for-businesses" },
+    { label: "WhatsApp Marketing", href: "/blog/whatsapp-marketing-automation" },
+    { label: "Web Design Trends", href: "/blog/web-design-trends-2025" },
+    { label: "Lead Gen Strategies", href: "/blog/lead-generation-strategies-ai" },
   ],
 };
 
 const socials = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Mail, href: "mailto:team.nexloop@gmail.com", label: "Email" },
-];
-
-const ticker = [
-  "AI Automation", "Lead Generation", "WhatsApp Bots",
-  "Voice Agents", "Website Development", "CRM Integration",
-  "24/7 Systems", "Business Growth",
+  { icon: Twitter, href: "https://twitter.com/nexloopapp", label: "Twitter" },
+  { icon: Linkedin, href: "https://linkedin.com/company/nexloop", label: "LinkedIn" },
+  { icon: Instagram, href: "https://instagram.com/nexloopapp", label: "Instagram" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/[0.06]">
-      {/* Top glow */}
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-px"
-        style={{
-          background: "linear-gradient(90deg, transparent, rgba(124,58,237,0.4), transparent)",
-        }}
-      />
+    <footer className="relative" style={{ borderTop: "1px solid var(--border)" }}>
 
-      {/* Ticker */}
-      <div className="py-4 border-b border-white/[0.05]">
-        <div className="ticker-wrap">
-          <div className="ticker-inner">
-            {[...ticker, ...ticker].map((item, i) => (
-              <span
-                key={i}
-                className="flex items-center gap-4 px-6 text-xs text-white/30 shrink-0 tracking-wide"
-              >
-                <span className="w-1 h-1 rounded-full bg-purple-500/50 shrink-0" />
-                {item}
-              </span>
-            ))}
-          </div>
+      {/* Big CTA Strip */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+        className="relative overflow-hidden py-20 sm:py-28 px-4 sm:px-8 text-center"
+        style={{ background: "var(--bg-alt)" }}
+      >
+        {/* Bg glow */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: "radial-gradient(ellipse at 50% 80%, var(--accent-glow) 0%, transparent 60%)",
+            filter: "blur(80px)",
+          }}
+        />
+
+        <div className="relative z-10 max-w-2xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className="eyebrow mb-8">Ready to start?</span>
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="headline-lg mt-8"
+          >
+            Ready to build something{" "}
+            <span className="brand-text">great</span>?
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="body-lg mt-4 max-w-md mx-auto"
+          >
+            Let&apos;s turn your idea into a product that works — and a system that grows.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8"
+          >
+            <Link href="/#contact" className="btn-primary px-8 py-4 text-sm">
+              <Sparkles size={14} />
+              Start a project <ArrowUpRight size={14} />
+            </Link>
+            <Link href="/blog" className="btn-ghost px-7 py-4 text-sm">
+              Read our blog →
+            </Link>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
-        <div className="flex flex-col lg:flex-row gap-10 sm:gap-12">
-          {/* Brand */}
-          <div className="lg:w-56 shrink-0">
-            <a href="#" className="flex items-center gap-2.5 mb-4">
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-purple-600/80 to-violet-700/80 border border-purple-500/30 flex items-center justify-center shadow-[0_0_10px_rgba(124,58,237,0.35)]">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                  <path d="M6 0.5L11 3V9L6 11.5L1 9V3L6 0.5Z" fill="white" opacity="0.95" />
-                </svg>
-              </div>
-              <span className="font-bold text-base tracking-tight"><span className="text-white">Nex</span><span style={{ background: 'linear-gradient(135deg,#a78bfa,#818cf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Loop</span></span>
-            </a>
-            <p className="text-sm text-white/35 leading-relaxed mb-5">
-              NexLoop builds AI automation systems and high-converting
-              websites that grow your business on autopilot.
+      {/* Footer grid */}
+      <div className="container-xl py-14 sm:py-16">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+
+          {/* Brand column */}
+          <div className="lg:w-72 shrink-0">
+            <Link href="/" className="flex items-center gap-2.5 mb-5">
+              <span className="brand-dot" style={{ width: 11, height: 11 }} />
+              <span className="font-bold text-[16px] tracking-tight" style={{ fontFamily: "'DM Sans', sans-serif", color: "var(--fg)" }}>
+                NexLoop
+              </span>
+            </Link>
+            <p className="body-md max-w-xs">
+              Digital product agency. We build websites, mobile apps, and AI automation systems that grow your business — faster than you thought possible.
             </p>
-            <a href="mailto:team.nexloop@gmail.com" className="flex items-center gap-2 text-xs text-white/35 hover:text-white/60 transition-colors">
-              <Mail size={12} />
-              team.nexloop@gmail.com
-            </a>
-            <a href="tel:+919511875269" className="flex items-center gap-2 text-xs text-white/35 hover:text-white/60 transition-colors mt-1.5">
-              <Phone size={12} />
-              +91 9511875269
-            </a>
-            <div className="flex gap-2.5 mt-5">
-              {socials.map((s) => (
+            <div className="mt-6 space-y-2">
+              <a
+                href="mailto:team.nexloop@gmail.com"
+                className="flex items-center gap-2.5 body-sm transition-colors group"
+                style={{ color: "var(--fg-muted)" }}
+              >
+                <Mail size={13} className="shrink-0 group-hover:text-[var(--accent)] transition-colors" />
+                team.nexloop@gmail.com
+              </a>
+              <a
+                href="tel:+919511875269"
+                className="flex items-center gap-2.5 body-sm transition-colors group"
+                style={{ color: "var(--fg-muted)" }}
+              >
+                <Phone size={13} className="shrink-0 group-hover:text-[var(--accent)] transition-colors" />
+                +91 9511875269
+              </a>
+            </div>
+            {/* Socials */}
+            <div className="flex items-center gap-2.5 mt-6">
+              {socials.map(({ icon: Icon, href, label }) => (
                 <a
-                  key={s.label}
-                  href={s.href}
-                  aria-label={s.label}
-                  className="w-8 h-8 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-white/35 hover:text-white hover:border-white/20 transition-all"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 group"
+                  style={{
+                    border: "1.5px solid var(--border)",
+                    color: "var(--fg-muted)",
+                    background: "transparent",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = "var(--accent)";
+                    e.currentTarget.style.color = "var(--accent)";
+                    e.currentTarget.style.background = "var(--accent-subtle)";
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = "var(--border)";
+                    e.currentTarget.style.color = "var(--fg-muted)";
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.transform = "translateY(0)";
+                  }}
                 >
-                  <s.icon size={13} />
+                  <Icon size={15} />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Links */}
-          <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10">
-            {Object.entries(footerLinks).map(([category, links]) => (
-              <div key={category}>
-                <h4 className="text-xs font-semibold text-white/50 uppercase tracking-widest mb-4">
-                  {category}
-                </h4>
-                <ul className="flex flex-col gap-2.5">
-                  {links.map((link) => (
+          {/* Links grid */}
+          <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8">
+            {Object.entries(footerLinks).map(([cat, items]) => (
+              <div key={cat}>
+                <p className="label mb-5">{cat}</p>
+                <ul className="space-y-3">
+                  {items.map((link) => (
                     <li key={link.label}>
-                      <a
+                      <Link
                         href={link.href}
-                        className="flex items-center gap-1 text-sm text-white/30 hover:text-white/70 transition-colors group"
+                        className="text-sm transition-colors duration-200"
+                        style={{ color: "var(--fg-muted)" }}
+                        onMouseEnter={(e) => (e.currentTarget.style.color = "var(--fg)")}
+                        onMouseLeave={(e) => (e.currentTarget.style.color = "var(--fg-muted)")}
                       >
                         {link.label}
-                        <ArrowUpRight size={11} className="opacity-0 group-hover:opacity-50 transition-opacity" />
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -127,15 +193,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/25">
-            © {new Date().getFullYear()} NexLoop. All rights reserved.
-          </p>
-          <p className="text-xs text-white/25">
-            Built with{" "}
-            <span className="text-purple-400/70">Next.js + Framer Motion</span>
-          </p>
+        <div className="divider mt-12 mb-6" />
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="body-sm">© {new Date().getFullYear()} NexLoop. All rights reserved.</p>
+          <p className="body-sm">Crafted with care in India 🇮🇳</p>
         </div>
       </div>
     </footer>
