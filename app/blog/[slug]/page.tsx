@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Clock, Calendar, Tag, Share2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Clock, Calendar, Tag } from "lucide-react";
 import { blogPosts, getPostBySlug, getRelatedPosts, formatDate } from "@/lib/blog";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ShareButton from "@/components/ShareButton";
 
 interface Props {
   params: { slug: string };
@@ -150,18 +151,7 @@ export default function BlogPostPage({ params }: Props) {
                   <p className="text-sm font-semibold" style={{ color: "var(--fg)" }}>{post.author}</p>
                   <p className="body-xs">{post.authorRole}</p>
                 </div>
-                <button
-                  className="ml-auto flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full transition-all duration-200 btn-ghost"
-                  onClick={() => {
-                    if (navigator.share) {
-                      navigator.share({ title: post.title, url: window.location.href });
-                    } else {
-                      navigator.clipboard.writeText(window.location.href);
-                    }
-                  }}
-                >
-                  <Share2 size={14} /> Share
-                </button>
+                <ShareButton title={post.title} className="ml-auto" />
               </div>
             </div>
           </div>
