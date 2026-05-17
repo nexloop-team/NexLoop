@@ -69,7 +69,7 @@ export const HeroParallax = () => {
                 }}
               >
                 <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: "var(--accent)" }} />
-                Digital Product Agency — Est. 2024
+                Digital Product Agency - Est. 2024
               </span>
             </motion.div>
 
@@ -105,7 +105,7 @@ export const HeroParallax = () => {
               transition={{ duration: 0.6, delay: 0.25 }}
               className="body-lg mt-5 max-w-xl"
             >
-              We craft high-converting websites, mobile apps, and AI automation systems — delivered in{" "}
+              We craft high-converting websites, mobile apps, and AI automation systems - delivered in{" "}
               <strong style={{ color: "var(--fg)", fontWeight: 600 }}>days, not months</strong>.
             </motion.p>
 

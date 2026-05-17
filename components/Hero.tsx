@@ -60,7 +60,7 @@ export default function Hero() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium" style={{ background: 'var(--accent-subtle)', border: '1px solid var(--border)', color: 'var(--fg-secondary)' }}>
               <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'var(--accent)' }} />
-              Digital Product Agency — Est. 2024
+              Digital Product Agency - Est. 2024
             </span>
           </motion.div>
 
@@ -99,7 +99,7 @@ export default function Hero() {
             style={{ y: subtextY, opacity: headlineOpacity }}
             className="body-lg mt-5 max-w-xl"
           >
-            We craft high-converting websites, mobile apps, and AI automation systems — delivered in <strong style={{ color: 'var(--fg)', fontWeight: 600 }}>days, not months</strong>.
+            We craft high-converting websites, mobile apps, and AI automation systems - delivered in <strong style={{ color: 'var(--fg)', fontWeight: 600 }}>days, not months</strong>.
           </motion.p>
 
           {/* CTAs — scroll-reactive */}

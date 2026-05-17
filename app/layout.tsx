@@ -11,9 +11,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexloop.in"),
-  title: "NexLoop | AI Automation Agency — Chatbots, Leads & Growth",
+  title: "NexLoop | AI Automation Agency - Chatbots, Leads & Growth",
   description:
-    "NexLoop builds AI automation systems — chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
+    "NexLoop builds AI automation systems - chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
   keywords: [
     // Primary
     "AI automation services",
@@ -57,16 +57,16 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://nexloop.in",
     siteName: "NexLoop",
-    title: "NexLoop — AI Automation Partner for Growth-Focused Businesses",
+    title: "NexLoop - AI Automation Partner for Growth-Focused Businesses",
     description:
-      "NexLoop builds AI automation systems — chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
+      "NexLoop builds AI automation systems - chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
     locale: "en_US",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "NexLoop — AI Automation for Modern Businesses",
+        alt: "NexLoop - AI Automation for Modern Businesses",
       },
     ],
   },
@@ -74,9 +74,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@nexloopapp",
     creator: "@nexloopapp",
-    title: "NexLoop — AI Automation Partner for Growth-Focused Businesses",
+    title: "NexLoop - AI Automation Partner for Growth-Focused Businesses",
     description:
-      "NexLoop builds AI automation systems — chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
+      "NexLoop builds AI automation systems - chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
     images: ["/og-image.png"],
   },
 };
