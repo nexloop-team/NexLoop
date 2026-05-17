@@ -47,9 +47,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon0.svg", type: "image/svg+xml" },
+      { url: "/icon1.png", sizes: "512x512", type: "image/png" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
     shortcut: "/favicon.ico",
   },
   openGraph: {
@@ -85,7 +86,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "NexLoop",
   url: "https://nexloop.in",
-  logo: "https://nexloop.in/icon.svg",
+  logo: "https://nexloop.in/icon0.svg",
   description:
     "NexLoop is an AI automation agency that builds intelligent automation systems including AI chatbots, WhatsApp bots, voice agents, lead generation systems, and CRM automation for modern businesses.",
   contactPoint: {

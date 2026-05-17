@@ -6,6 +6,7 @@ import { Menu, X, Sun, Moon, Sparkles } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 type NavLink = { label: string; href: string; id: string };
 
@@ -81,17 +82,19 @@ export default function Navbar() {
         <div className="container-xl flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2.5 group" aria-label="NexLoop Home">
             <motion.div
-              whileHover={{ scale: 1.15, rotate: 10 }}
-              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              whileHover={{ scale: 1.05, rotate: 2 }}
+              transition={{ type: "spring", stiffness: 300, damping: 18 }}
+              className="flex items-center"
             >
-              <span className="brand-dot" style={{ width: 11, height: 11 }} />
+              <Image
+                src="/logo1.png"
+                alt="NexLoop"
+                width={200}
+                height={48}
+                priority
+                className="logo-mark h-[36px] w-auto origin-left scale-[4.9]"
+              />
             </motion.div>
-            <span
-              className="font-display font-bold text-[16px] tracking-tight"
-              style={{ color: "var(--fg)", fontFamily: "'DM Sans', sans-serif" }}
-            >
-              NexLoop
-            </span>
           </Link>
 
           <nav className="hidden md:flex items-center" aria-label="Main navigation">
