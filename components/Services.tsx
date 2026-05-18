@@ -233,7 +233,7 @@ export default function Services() {
   const bgY = useTransform(scrollYProgress, [0, 1], [0, -40]);
 
   return (
-    <section id="services" ref={sectionRef} className="relative py-16 sm:py-24 px-4 sm:px-8 section-warm overflow-hidden">
+    <section id="services" ref={sectionRef} className="relative section-pad px-4 sm:px-8 section-warm overflow-hidden">
 
       {/* Decorative bg orb */}
       <div
@@ -253,7 +253,7 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 sm:mb-20 max-w-2xl"
+          className="section-header"
         >
           <span className="eyebrow mb-6">What we build</span>
           <h2 className="headline-lg mt-6">
@@ -313,7 +313,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="section-header"
           >
             <span className="eyebrow mb-6">Our packages</span>
             <h2 className="headline-lg mt-6">

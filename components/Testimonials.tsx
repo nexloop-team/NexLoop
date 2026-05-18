@@ -155,7 +155,7 @@ export default function Testimonials() {
     <section
       id="reviews"
       ref={sectionRef}
-      className="relative py-16 sm:py-32 px-4 sm:px-8 section-warm overflow-hidden"
+      className="relative section-pad px-4 sm:px-8 section-warm overflow-hidden"
     >
       {/* Bg orb */}
       <div
@@ -174,7 +174,7 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.65 }}
-          className="mb-10 sm:mb-20 max-w-2xl"
+          className="section-header"
         >
           <span className="eyebrow mb-6">Client results</span>
           <h2 className="headline-lg mt-6">

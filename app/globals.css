@@ -201,6 +201,18 @@ a { color: inherit; text-decoration: none; }
 .container-lg { max-width: 1040px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 40px); }
 .divider { height: 1px; background: var(--border); }
 
+/* Consistent section spacing */
+.section-pad { padding: 48px 0; }
+.section-pad-compact { padding: 28px 0; }
+@media (min-width: 640px) {
+  .section-pad { padding: 80px 0; }
+  .section-pad-compact { padding: 40px 0; }
+}
+.section-header { max-width: 40rem; margin-bottom: 2.5rem; }
+@media (min-width: 640px) {
+  .section-header { margin-bottom: 3.5rem; }
+}
+
 /* ════════════════ BUTTONS ════════════════ */
 .btn-primary {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
@@ -352,10 +364,11 @@ a { color: inherit; text-decoration: none; }
 
 /* ════════════════ NAV ════════════════ */
 .glass-nav {
-  background: var(--nav-bg);
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-bottom: 1px solid var(--border);
+  background: rgba(250,250,247,0.78);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border-bottom: 1px solid rgba(228,226,218,0.8);
+  box-shadow: 0 8px 30px rgba(26,26,31,0.08);
 }
 .nav-dock {
   display: inline-flex; align-items: center; gap: 6px;
@@ -617,6 +630,38 @@ a { color: inherit; text-decoration: none; }
 }
 .ticker-inner { display: flex; animation: ticker 38s linear infinite; width: max-content; }
 .ticker-inner:hover { animation-play-state: paused; }
+
+/* Portfolio bento grid layout */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      "hero hero app"
+      "automation contact app"
+      "dashboard dashboard dashboard";
+    align-items: start;
+  }
+  .portfolio-hero { grid-area: hero; }
+  .portfolio-app { grid-area: app; }
+  .portfolio-automation { grid-area: automation; }
+  .portfolio-contact { grid-area: contact; }
+  .portfolio-dashboard { grid-area: dashboard; }
+}
+
+.portfolio-card {
+  background: rgba(12, 12, 16, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  position: relative;
+  align-self: start;
+}
 
 /* ════════════════ GRAIN ════════════════ */
 .grain-overlay::after {

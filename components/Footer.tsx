@@ -43,7 +43,7 @@ export default function Footer() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="relative overflow-hidden py-20 sm:py-28 px-4 sm:px-8 text-center"
+        className="relative overflow-hidden section-pad-compact px-4 sm:px-8 text-center"
         style={{ background: "var(--bg-alt)" }}
       >
         {/* Bg glow */}
@@ -62,14 +62,14 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <span className="eyebrow mb-8">Ready to start?</span>
+            <span className="eyebrow mb-5">Ready to start?</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="headline-lg mt-8"
+            className="headline-md mt-6"
           >
             Ready to build something{" "}
             <span className="brand-text">great</span>?
@@ -79,7 +79,7 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="body-lg mt-4 max-w-md mx-auto"
+            className="body-md mt-3 max-w-md mx-auto"
           >
             Let&apos;s turn your idea into a product that works — and a system that grows.
           </motion.p>
@@ -88,13 +88,13 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8"
+            className="flex flex-col sm:flex-row items-center justify-center gap-2.5 mt-6"
           >
-            <Link href="/#contact" className="btn-primary px-8 py-4 text-sm">
+            <Link href="/#contact" className="btn-primary px-6 py-3 text-sm">
               <Sparkles size={14} />
               Start a project <ArrowUpRight size={14} />
             </Link>
-            <Link href="/blog" className="btn-ghost px-7 py-4 text-sm">
+            <Link href="/blog" className="btn-ghost px-6 py-3 text-sm">
               Read our blog →
             </Link>
           </motion.div>
@@ -102,7 +102,7 @@ export default function Footer() {
       </motion.div>
 
       {/* Footer grid */}
-      <div className="container-xl py-14 sm:py-16">
+      <div className="container-xl section-pad-compact">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
 
           {/* Brand column */}

@@ -64,7 +64,7 @@ export default function CTA() {
         </motion.div>
       )}
 
-      <section id="contact" ref={ref} className="relative py-20 sm:py-32 px-5 sm:px-8 section-gradient-2 grain-overlay overflow-hidden">
+      <section id="contact" ref={ref} className="relative section-pad px-5 sm:px-8 section-gradient-2 grain-overlay overflow-hidden">
         <div className="relative z-10 max-w-5xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
 

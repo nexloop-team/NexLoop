@@ -44,7 +44,7 @@ export default function HowItWorks() {
     <section
       id="process"
       ref={sectionRef}
-      className="relative py-14 sm:py-32 px-4 sm:px-8 section-alt grain-overlay overflow-hidden"
+      className="relative section-pad px-4 sm:px-8 section-alt grain-overlay overflow-hidden"
     >
       <div className="relative z-10 container-xl">
 
@@ -54,7 +54,7 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.65 }}
-          className="mb-16 sm:mb-24 max-w-2xl"
+          className="section-header"
         >
           <span className="eyebrow mb-6">How it works</span>
           <h2 className="headline-lg mt-6">

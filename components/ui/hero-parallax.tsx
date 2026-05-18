@@ -52,7 +52,7 @@ export const HeroParallax = () => {
       <div className="hero-grid" />
       <div className="hero-particles" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 pt-32 pb-16 md:pt-36 md:pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 pt-24 pb-10 md:pt-28 md:pb-16">
         <div className="grid gap-16 md:grid-cols-[1.05fr,0.95fr] items-center">
           <div>
             <motion.div

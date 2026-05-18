@@ -11,11 +11,11 @@ import Image from "next/image";
 type NavLink = { label: string; href: string; id: string };
 
 const navLinks: NavLink[] = [
+  { label: "About", href: "/#about", id: "about" },
   { label: "Services", href: "/#services", id: "services" },
-  { label: "Process", href: "/#process", id: "process" },
-  { label: "Reviews", href: "/#reviews", id: "reviews" },
-  { label: "Blog", href: "/blog", id: "blog" },
+  { label: "Projects", href: "/#portfolio", id: "portfolio" },
   { label: "Contact", href: "/#contact", id: "contact" },
+  { label: "Blog", href: "/blog", id: "blog" },
 ];
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("services");
+  const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
     const onScroll = () => {
@@ -54,20 +54,22 @@ export default function Navbar() {
 
     if (!sections.length) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (visible[0]?.target?.id) {
-          setActiveSection(visible[0].target.id);
-        }
-      },
-      { rootMargin: "-20% 0px -55% 0px", threshold: [0.2, 0.4, 0.6] }
-    );
+    const updateActive = () => {
+      const anchor = window.scrollY + window.innerHeight * 0.35;
+      let current = sections[0].id;
+      for (const section of sections) {
+        if (anchor >= section.offsetTop) current = section.id;
+      }
+      setActiveSection(current);
+    };
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    updateActive();
+    window.addEventListener("scroll", updateActive, { passive: true });
+    window.addEventListener("resize", updateActive);
+    return () => {
+      window.removeEventListener("scroll", updateActive);
+      window.removeEventListener("resize", updateActive);
+    };
   }, [pathname]);
 
   return (

@@ -11,12 +11,12 @@ export default function CustomCursor() {
   const mouseY = useMotionValue(-100);
 
   // Dot follows instantly
-  const dotX = useSpring(mouseX, { stiffness: 1200, damping: 40 });
-  const dotY = useSpring(mouseY, { stiffness: 1200, damping: 40 });
+  const dotX = useSpring(mouseX, { stiffness: 1800, damping: 30 });
+  const dotY = useSpring(mouseY, { stiffness: 1800, damping: 30 });
 
   // Ring lags behind — the "trail" effect
-  const ringX = useSpring(mouseX, { stiffness: 120, damping: 20 });
-  const ringY = useSpring(mouseY, { stiffness: 120, damping: 20 });
+  const ringX = useSpring(mouseX, { stiffness: 260, damping: 22 });
+  const ringY = useSpring(mouseY, { stiffness: 260, damping: 22 });
 
   const [isHovering, setIsHovering] = useState(false);
   const [isClicking, setIsClicking] = useState(false);
@@ -102,7 +102,7 @@ export default function CustomCursor() {
           width: isHovering ? 28 : 26,
           height: isHovering ? 28 : 26,
         }}
-        transition={{ scale: { type: "spring", stiffness: 200, damping: 18 }, opacity: { duration: 0.15 } }}
+        transition={{ scale: { type: "spring", stiffness: 300, damping: 18 }, opacity: { duration: 0.1 } }}
       >
         <div
           style={{
@@ -136,7 +136,7 @@ export default function CustomCursor() {
           opacity: isVisible ? 1 : 0,
           scale: isClicking ? 0.6 : 1,
         }}
-        transition={{ opacity: { duration: 0.15 }, scale: { type: "spring", stiffness: 400, damping: 20 } }}
+        transition={{ opacity: { duration: 0.1 }, scale: { type: "spring", stiffness: 520, damping: 18 } }}
       />
     </>
   );
