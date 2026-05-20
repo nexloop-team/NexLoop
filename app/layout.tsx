@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 import ThemeProvider from "@/components/ThemeProvider";
 import CustomCursor from "@/components/CustomCursor";
+import LenisProvider from "@/components/LenisProvider";
 import "./globals.css";
 import { DM_Sans, Inter } from "next/font/google";
 
@@ -11,9 +12,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexloop.in"),
-  title: "NexLoop | AI Automation Agency - Chatbots, Leads & Growth",
+  title: "NexLoop | Website Design & Development Studio",
   description:
-    "NexLoop builds AI automation systems - chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
+    "NexLoop designs and builds minimal, high-converting websites and digital products with Next.js. Custom design, fast delivery, no templates.",
   keywords: [
     // Primary
     "AI automation services",
@@ -57,9 +58,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://nexloop.in",
     siteName: "NexLoop",
-    title: "NexLoop - AI Automation Partner for Growth-Focused Businesses",
+    title: "NexLoop | Website Design & Development Studio",
     description:
-      "NexLoop builds AI automation systems - chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
+      "Minimal, high-converting websites and digital products. Custom Next.js builds — no templates.",
     locale: "en_US",
     images: [
       {
@@ -74,9 +75,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@nexloopapp",
     creator: "@nexloopapp",
-    title: "NexLoop - AI Automation Partner for Growth-Focused Businesses",
+    title: "NexLoop | Website Design & Development Studio",
     description:
-      "NexLoop builds AI automation systems - chatbots, WhatsApp bots, voice agents & lead generation for modern businesses. 3x more leads. 48h delivery.",
+      "Minimal, high-converting websites and digital products. Custom Next.js builds — no templates.",
     images: ["/og-image.png"],
   },
 };
@@ -88,7 +89,7 @@ const organizationSchema = {
   url: "https://nexloop.in",
   logo: "https://nexloop.in/icon0.svg",
   description:
-    "NexLoop is an AI automation agency that builds intelligent automation systems including AI chatbots, WhatsApp bots, voice agents, lead generation systems, and CRM automation for modern businesses.",
+    "NexLoop is a website design and development studio building minimal, high-converting sites and digital products with Next.js.",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
@@ -195,8 +196,10 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <ThemeProvider>
-          <CustomCursor />
-          {children}
+          <LenisProvider>
+            <CustomCursor />
+            {children}
+          </LenisProvider>
         </ThemeProvider>
         <Analytics />
       </body>

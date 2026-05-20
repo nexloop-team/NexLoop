@@ -37,13 +37,13 @@ export default function Footer() {
   return (
     <footer className="relative" style={{ borderTop: "1px solid var(--border)" }}>
 
-      {/* Big CTA Strip */}
+      {/* Big CTA Strip — desktop (mobile uses sticky bar + contact section) */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
-        className="relative overflow-hidden section-pad-compact px-4 sm:px-8 text-center"
+        className="desktop-only relative overflow-hidden section-pad-compact px-4 sm:px-8 text-center"
         style={{ background: "var(--bg-alt)" }}
       >
         {/* Bg glow */}
@@ -113,7 +113,7 @@ export default function Footer() {
                 NexLoop
               </span>
             </Link>
-            <p className="body-md max-w-xs">
+            <p className="body-md max-w-xs hidden md:block">
               Digital product agency. We build websites, mobile apps, and AI automation systems that grow your business — faster than you thought possible.
             </p>
             <div className="mt-6 space-y-2">
@@ -168,8 +168,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links grid */}
-          <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-8">
+          {/* Links grid — desktop */}
+          <div className="desktop-only flex-1 grid grid-cols-2 md:grid-cols-3 gap-8">
             {Object.entries(footerLinks).map(([cat, items]) => (
               <div key={cat}>
                 <p className="label mb-5">{cat}</p>

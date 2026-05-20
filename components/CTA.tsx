@@ -28,8 +28,10 @@ export default function CTA() {
     const onScroll = () => {
       if (stickyDismissed) return;
       const sectionTop = ref.current?.getBoundingClientRect().top ?? 999;
-      setShowSticky(window.scrollY > 500 && sectionTop > window.innerHeight * 1.2);
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      setShowSticky(scrollY > 500 && sectionTop > window.innerHeight * 1.2);
     };
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [stickyDismissed]);
@@ -66,7 +68,7 @@ export default function CTA() {
 
       <section id="contact" ref={ref} className="relative section-pad px-5 sm:px-8 section-gradient-2 grain-overlay overflow-hidden">
         <div className="relative z-10 max-w-5xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
 
             {/* Left */}
             <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1">
@@ -74,9 +76,12 @@ export default function CTA() {
                 <span className="w-2 h-2 rounded-full" style={{ background: 'var(--accent)' }} /> Get in touch
               </div>
               <h2 className="headline-lg">Have a project?<br /><span className="brand-text">Let&apos;s talk.</span></h2>
-              <p className="body-lg mt-4 max-w-md">Book a free 30-minute consultation. We&apos;ll analyze your business and give you a custom roadmap — no strings attached.</p>
+              <p className="body-lg mt-4 max-w-md hidden md:block">Book a free 30-minute consultation. We&apos;ll analyze your business and give you a custom roadmap — no strings attached.</p>
+              <p className="body-md mt-3 md:hidden" style={{ color: "var(--fg-secondary)" }}>
+                Free 30-min call · Reply within 24 hours.
+              </p>
 
-              <div className="mt-8 space-y-3">
+              <div className="mt-6 md:mt-8 space-y-3 hidden md:block">
                 {guarantees.map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: 'var(--accent-subtle)', border: '1px solid var(--border)' }}>
@@ -87,7 +92,7 @@ export default function CTA() {
                 ))}
               </div>
 
-              <div className="mt-8 space-y-2">
+              <div className="mt-6 md:mt-8 space-y-2 hidden md:block">
                 <a href="mailto:team.nexloop@gmail.com" className="flex items-center gap-2 body-sm hover:brand-text transition-colors" style={{ color: 'var(--fg-muted)' }}>
                   <Mail size={14} /> team.nexloop@gmail.com
                 </a>

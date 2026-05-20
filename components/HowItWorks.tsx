@@ -2,35 +2,32 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+
+const stepStyle = {
+  color: "var(--accent)",
+  bg: "var(--accent-subtle)",
+  border: "var(--border)",
+};
 
 const steps = [
   {
     num: "01",
-    title: "Discovery Call",
-    desc: "Free 30-minute strategy session. We audit your current setup, understand your goals, and map out exactly where AI and digital products will have the biggest revenue impact.",
+    title: "Discover",
+    desc: "A focused call to understand your brand, audience, and goals. We agree on scope, timeline, and what success looks like before design starts.",
     detail: "Free · 30 minutes",
-    color: "#5B4FE8",
-    bg: "rgba(91,79,232,0.07)",
-    border: "rgba(91,79,232,0.2)",
   },
   {
     num: "02",
-    title: "Design & Build",
-    desc: "Our team designs and develops your complete solution — websites, apps, AI bots, or full automation stacks. No templates. Everything is custom-built and tested for your business.",
-    detail: "Average 48-hour delivery",
-    color: "#10B981",
-    bg: "rgba(16,185,129,0.07)",
-    border: "rgba(16,185,129,0.2)",
+    title: "Design & build",
+    desc: "Figma layouts, then production in Next.js — custom components, responsive polish, and performance checks throughout.",
+    detail: "Clear milestones",
   },
   {
     num: "03",
-    title: "Launch & Grow",
-    desc: "We deploy, QA, and hand over everything with full documentation. Your new system works 24/7 — capturing leads, automating workflows, and growing revenue on autopilot.",
-    detail: "Ongoing support included",
-    color: "#3B82F6",
-    bg: "rgba(59,130,246,0.07)",
-    border: "rgba(59,130,246,0.2)",
+    title: "Launch & handoff",
+    desc: "Deploy to Vercel, final QA, analytics setup, and documentation so your team can own the site after go-live.",
+    detail: "You keep the code",
   },
 ];
 
@@ -44,7 +41,7 @@ export default function HowItWorks() {
     <section
       id="process"
       ref={sectionRef}
-      className="relative section-pad px-4 sm:px-8 section-alt grain-overlay overflow-hidden"
+      className="relative section-pad px-4 sm:px-8 section-alt overflow-hidden"
     >
       <div className="relative z-10 container-xl">
 
@@ -56,13 +53,13 @@ export default function HowItWorks() {
           transition={{ duration: 0.65 }}
           className="section-header"
         >
-          <span className="eyebrow mb-6">How it works</span>
+          <span className="eyebrow mb-6">Process</span>
           <h2 className="headline-lg mt-6">
-            Three steps to a{" "}
-            <span className="brand-text">system that sells</span>.
+            Simple steps from{" "}
+            <span className="brand-text">brief to launch</span>.
           </h2>
-          <p className="body-lg mt-4 max-w-lg">
-            From your first call to fully deployed — in days, not months. No jargon, no delays.
+          <p className="body-lg mt-4 max-w-lg" style={{ color: "var(--fg-secondary)" }}>
+            Transparent process, fixed checkpoints, and a site you can maintain after handoff.
           </p>
         </motion.div>
 
@@ -74,7 +71,7 @@ export default function HowItWorks() {
             style={{ background: "var(--border)" }}
           >
             <motion.div
-              style={{ height: lineHeight, background: "linear-gradient(180deg, var(--accent) 0%, #10B981 50%, #3B82F6 100%)" }}
+              style={{ height: lineHeight, background: "var(--accent)" }}
               className="w-full rounded-full"
             />
           </div>
@@ -97,11 +94,10 @@ export default function HowItWorks() {
                     transition={{ duration: 0.6, delay: 0.3 + i * 0.12 }}
                     className="w-[62px] h-[62px] rounded-2xl flex items-center justify-center text-sm font-bold tracking-wide transition-all duration-400 group-hover:shadow-lg"
                     style={{
-                      background: step.bg,
-                      border: `1.5px solid ${step.border}`,
-                      color: step.color,
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontWeight: 800,
+                      background: stepStyle.bg,
+                      border: `1.5px solid ${stepStyle.border}`,
+                      color: stepStyle.color,
+                      fontWeight: 700,
                     }}
                   >
                     {step.num}
@@ -117,7 +113,7 @@ export default function HowItWorks() {
                       {/* Mobile step num */}
                       <span
                         className="md:hidden label mb-2 block"
-                        style={{ color: step.color }}
+                        style={{ color: stepStyle.color }}
                       >
                         {step.num}
                       </span>
@@ -126,20 +122,19 @@ export default function HowItWorks() {
                       <div
                         className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold"
                         style={{
-                          background: step.bg,
-                          border: `1px solid ${step.border}`,
-                          color: step.color,
+                          background: stepStyle.bg,
+                          border: `1px solid ${stepStyle.border}`,
+                          color: stepStyle.color,
                         }}
                       >
-                        <Sparkles size={11} />
                         {step.detail}
                       </div>
                     </div>
                     <div
                       className="hidden sm:flex w-10 h-10 rounded-full items-center justify-center shrink-0 mt-1 transition-all duration-400 group-hover:translate-x-1 group-hover:-translate-y-1"
-                      style={{ background: step.bg, border: `1px solid ${step.border}` }}
+                      style={{ background: stepStyle.bg, border: `1px solid ${stepStyle.border}` }}
                     >
-                      <ArrowUpRight size={16} style={{ color: step.color }} />
+                      <ArrowUpRight size={16} style={{ color: stepStyle.color }} />
                     </div>
                   </div>
                 </div>

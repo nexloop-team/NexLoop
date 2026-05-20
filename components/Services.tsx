@@ -3,59 +3,75 @@
 import { useState, useRef } from "react";
 import type { MouseEvent } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
-import { ArrowUpRight, Check, Monitor, Smartphone, Bot, Globe, Zap, MessageSquare, Database, Sparkles, Mic } from "lucide-react";
+import { ArrowUpRight, Check, Monitor, Smartphone, Bot, Globe } from "lucide-react";
 
-/* ── Service tiles ── */
-const bentoItems = [
+const ACCENT = "var(--accent)";
+
+type Capability = {
+  icon: React.ElementType;
+  title: string;
+  desc: string;
+  tags: string[];
+};
+
+const capabilities: Capability[] = [
   {
     icon: Globe,
-    title: "Website Development",
-    desc: "High-converting, mobile-first websites built with Next.js — SEO-optimized, blazing fast, designed to turn visitors into paying clients.",
-    tags: ["Next.js", "SEO", "Mobile-first"],
-    span: "col-span-1 md:col-span-2",
-    accent: "#5B4FE8",
+    title: "Website design & development",
+    desc: "Minimal, conversion-focused sites in Next.js — custom UI, SEO structure, and performance built in from day one.",
+    tags: ["Next.js", "Figma", "SEO"],
   },
   {
-    icon: Zap,
-    title: "Mobile Apps",
-    desc: "Android apps built with Flutter — from MVPs to full product catalogues, launched in days.",
-    tags: ["Flutter", "Play Store"],
-    span: "col-span-1",
-    accent: "#10B981",
+    icon: Smartphone,
+    title: "Web apps & product UI",
+    desc: "Dashboards, landing systems, and mobile apps — clear flows, accessible components, launch-ready builds.",
+    tags: ["React", "Flutter", "Product"],
   },
   {
-    icon: MessageSquare,
-    title: "AI Chatbots",
-    desc: "GPT-4 powered bots for websites & WhatsApp — 24/7 lead qualification, never miss a customer.",
-    tags: ["GPT-4o", "WhatsApp"],
-    span: "col-span-1",
-    accent: "#3B82F6",
-  },
-  {
-    icon: Database,
-    title: "CRM & Lead Automation",
-    desc: "Automated lead capture, CRM sync, follow-up sequences, and pipeline management — zero manual effort.",
-    tags: ["Zapier", "HubSpot", "Notion"],
-    span: "col-span-1 md:col-span-2",
-    accent: "#F59E0B",
-  },
-  {
-    icon: Sparkles,
-    title: "Landing Pages",
-    desc: "Conversion-focused pages with A/B structure, analytics integration, and precise copy.",
-    tags: ["A/B Ready", "Analytics"],
-    span: "col-span-1",
-    accent: "#EC4899",
-  },
-  {
-    icon: Mic,
-    title: "AI Voice Agents",
-    desc: "Handle inbound calls, qualify prospects, and auto-schedule meetings — 24/7 without a team.",
-    tags: ["Voice AI", "Scheduling"],
-    span: "col-span-1",
-    accent: "#8B5CF6",
+    icon: Bot,
+    title: "Automation & AI",
+    desc: "Chatbots, WhatsApp flows, and CRM automation that qualify leads and reduce manual follow-up.",
+    tags: ["WhatsApp", "CRM", "GPT"],
   },
 ];
+
+function CapabilityRow({ item, index }: { item: Capability; index: number }) {
+  const Icon = item.icon;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.45, delay: index * 0.07 }}
+      className="capability-row group"
+    >
+      <span className="capability-num">{String(index + 1).padStart(2, "0")}</span>
+      <div className="capability-body">
+        <div className="capability-main">
+          <div className="capability-icon" aria-hidden>
+            <Icon size={22} style={{ color: ACCENT }} />
+          </div>
+          <div className="capability-copy">
+            <h3 className="capability-title">{item.title}</h3>
+            <p className="capability-desc">{item.desc}</p>
+            <div className="capability-tags">
+              {item.tags.map((tag) => (
+                <span key={tag} className="capability-tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+        <a href="#contact" className="capability-cta">
+          <span className="hidden sm:inline">Discuss</span>
+          <ArrowUpRight size={18} className="capability-cta-icon" />
+        </a>
+      </div>
+    </motion.div>
+  );
+}
 
 /* ── Packages (NO PRICES — outcome-focused) ── */
 type Package = {
@@ -235,16 +251,6 @@ export default function Services() {
   return (
     <section id="services" ref={sectionRef} className="relative section-pad px-4 sm:px-8 section-warm overflow-hidden">
 
-      {/* Decorative bg orb */}
-      <div
-        className="absolute top-0 right-0 w-[550px] h-[550px] rounded-full pointer-events-none opacity-25"
-        style={{
-          background: "radial-gradient(circle, var(--accent-glow) 0%, transparent 70%)",
-          filter: "blur(100px)",
-          transform: "translate(30%, -20%)",
-        }}
-      />
-
       <div className="container-xl relative z-10">
 
         {/* ── Section header ── */}
@@ -255,59 +261,25 @@ export default function Services() {
           transition={{ duration: 0.6 }}
           className="section-header"
         >
-          <span className="eyebrow mb-6">What we build</span>
+          <span className="eyebrow mb-6">Capabilities</span>
           <h2 className="headline-lg mt-6">
-            Everything you need to{" "}
-            <span className="brand-text">dominate online</span>.
+            Three ways we help you{" "}
+            <span className="brand-text">grow online</span>.
           </h2>
-          <p className="body-lg mt-4 max-w-xl">
-            From a simple landing page to a full AI automation stack — we design, build, and launch it all.
+          <p className="body-lg mt-4 max-w-xl hidden md:block" style={{ color: "var(--fg-secondary)" }}>
+            Focused services with clear deliverables — no bloated retainers, no template shops.
           </p>
         </motion.div>
 
-        {/* ── Bento Grid ── */}
-        <motion.div
-          style={{ y: bgY }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-28 sm:mb-36"
-        >
-          {bentoItems.map((item, i) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 28, scale: 0.97 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: i * 0.06, ease: [0.23, 1, 0.32, 1] }}
-              onMouseMove={handleMagneticMove}
-              onMouseLeave={handleMagneticLeave}
-              className={`bento-card magnetic-card p-7 sm:p-8 group cursor-default ${item.span}`}
-            >
-              <div className="relative z-10">
-                <div
-                  className="card-icon w-12 h-12 rounded-2xl flex items-center justify-center mb-5 transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
-                  style={{ background: `${item.accent}12`, border: `1px solid ${item.accent}25` }}
-                >
-                  <item.icon size={22} style={{ color: item.accent }} />
-                </div>
-                <h3 className="headline-sm mb-3">{item.title}</h3>
-                <p className="body-md mb-5">{item.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {item.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[11px] font-semibold px-2.5 py-1 rounded-md tracking-wide"
-                      style={{ background: "var(--bg-elevated)", color: "var(--fg-secondary)", border: "1px solid var(--border)" }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+        {/* ── Capabilities showcase ── */}
+        <motion.div style={{ y: bgY }} className="capability-showcase mb-8 md:mb-28">
+          {capabilities.map((item, i) => (
+            <CapabilityRow key={item.title} item={item} index={i} />
           ))}
         </motion.div>
 
-        {/* ── Packages (no prices) ── */}
-        <div>
+        {/* ── Packages — desktop only (keeps mobile page short) ── */}
+        <div className="hidden md:block">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}

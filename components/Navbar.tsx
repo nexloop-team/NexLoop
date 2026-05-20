@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon, Sparkles } from "lucide-react";
+import { Menu, X, Sun, Moon, ArrowUpRight } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -11,11 +11,10 @@ import Image from "next/image";
 type NavLink = { label: string; href: string; id: string };
 
 const navLinks: NavLink[] = [
-  { label: "About", href: "/#about", id: "about" },
+  { label: "Work", href: "/#portfolio", id: "portfolio" },
   { label: "Services", href: "/#services", id: "services" },
-  { label: "Projects", href: "/#portfolio", id: "portfolio" },
+  { label: "About", href: "/#about", id: "about" },
   { label: "Contact", href: "/#contact", id: "contact" },
-  { label: "Blog", href: "/blog", id: "blog" },
 ];
 
 export default function Navbar() {
@@ -23,11 +22,12 @@ export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("about");
+  const [activeSection, setActiveSection] = useState("portfolio");
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 40);
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      setScrolled(scrollY > 40);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -42,12 +42,23 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
+    if (!mobileOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  useEffect(() => {
     if (pathname !== "/") {
-      setActiveSection(pathname === "/blog" ? "blog" : "services");
+      setActiveSection("services");
       return;
     }
 
-    const ids = navLinks.map((link) => link.id).filter((id) => id !== "blog");
+    const ids = navLinks.map((link) => link.id);
     const sections = ids
       .map((id) => document.getElementById(id))
       .filter((section): section is HTMLElement => Boolean(section));
@@ -55,7 +66,8 @@ export default function Navbar() {
     if (!sections.length) return;
 
     const updateActive = () => {
-      const anchor = window.scrollY + window.innerHeight * 0.35;
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      const anchor = scrollY + window.innerHeight * 0.35;
       let current = sections[0].id;
       for (const section of sections) {
         if (anchor >= section.offsetTop) current = section.id;
@@ -102,7 +114,7 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center" aria-label="Main navigation">
             <div className={`nav-dock ${scrolled ? "nav-dock-scrolled" : ""}`}>
               {navLinks.map((link) => {
-                const isActive = pathname === "/blog" ? link.id === "blog" : link.id === activeSection;
+                const isActive = link.id === activeSection;
                 return (
                   <Link
                     key={link.label}
@@ -117,18 +129,6 @@ export default function Navbar() {
                       />
                     )}
                     {link.label}
-                    {link.label === "Blog" && (
-                      <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                        <span
-                          className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-50"
-                          style={{ background: "var(--accent)" }}
-                        />
-                        <span
-                          className="relative inline-flex rounded-full h-3 w-3"
-                          style={{ background: "var(--accent)", transform: "scale(0.65)" }}
-                        />
-                      </span>
-                    )}
                   </Link>
                 );
               })}
@@ -150,8 +150,7 @@ export default function Navbar() {
               </AnimatePresence>
             </button>
             <Link href="/#contact" className="btn-primary text-sm px-6 py-2.5 gap-1.5">
-              <Sparkles size={13} />
-              Start a project
+              Book a call <ArrowUpRight size={13} />
             </Link>
           </div>
 
@@ -212,7 +211,7 @@ export default function Navbar() {
             >
               <nav className="flex flex-col gap-1 mb-4" aria-label="Mobile navigation">
                 {navLinks.map((link, i) => {
-                  const isActive = pathname === "/blog" ? link.id === "blog" : link.id === activeSection;
+                  const isActive = link.id === activeSection;
                   return (
                     <motion.div
                       key={link.label}
@@ -228,22 +227,13 @@ export default function Navbar() {
                         }`}
                       >
                         {link.label}
-                        {link.label === "Blog" && (
-                          <span
-                            className="text-xs font-bold px-2 py-0.5 rounded-full"
-                            style={{ background: "var(--accent-subtle)", color: "var(--accent)" }}
-                          >
-                            New
-                          </span>
-                        )}
                       </Link>
                     </motion.div>
                   );
                 })}
               </nav>
               <Link href="/#contact" onClick={() => setMobileOpen(false)} className="btn-primary w-full py-3.5 text-sm">
-                <Sparkles size={13} />
-                Start a project →
+                Book a call <ArrowUpRight size={13} />
               </Link>
             </motion.div>
           </>
