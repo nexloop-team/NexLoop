@@ -168,10 +168,10 @@ export const HeroParallax = () => {
               className="body-lg mt-4 max-w-md hidden md:block"
               style={{ color: "var(--fg-secondary)" }}
             >
-              Custom Next.js sites and digital products — cinematic UX, fast delivery, no templates.
+              Custom Next.js sites and digital products - cinematic UX, fast delivery, no templates.
             </motion.p>
             <p className="body-md mt-3 max-w-sm md:hidden" style={{ color: "var(--fg-secondary)" }}>
-              Premium websites &amp; apps — fast delivery, no templates.
+              Premium websites &amp; apps - fast delivery, no templates.
             </p>
 
             <motion.div
@@ -185,11 +185,8 @@ export const HeroParallax = () => {
                   Start a project <ArrowUpRight size={14} />
                 </a>
               </Magnetic>
-              <a href="#portfolio" className="btn-ghost px-6 py-3.5 text-sm w-full sm:w-auto justify-center md:hidden">
-                View work
-              </a>
-              <Magnetic strength={0.3}>
-                <a href="#portfolio" className="btn-ghost px-7 py-4 text-sm hidden md:inline-flex">
+              <Magnetic strength={0.3} className="w-full sm:w-auto">
+                <a href="#portfolio" className="btn-ghost px-6 py-3.5 md:px-7 md:py-4 text-sm w-full justify-center">
                   View work
                 </a>
               </Magnetic>

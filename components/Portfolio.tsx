@@ -29,7 +29,7 @@ const projects: Project[] = [
     title: "NexLoop Studio",
     category: "Website",
     year: "2026",
-    desc: "Brand site built with Next.js — minimal layout, fast performance, clear service positioning.",
+    desc: "Brand site built with Next.js - minimal layout, fast performance, clear service positioning.",
     outcome: "Editorial layout · App Router · Dark theme",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     image: "/logo1.png",

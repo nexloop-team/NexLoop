@@ -1,6 +1,7 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "NexLoop - Website Design Studio",
+  "short_name": "NexLoop",
+  "description": "Custom Next.js websites, mobile apps & AI automation. Fast delivery, no templates.",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +16,8 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#0e0e11",
+  "background_color": "#0e0e11",
+  "display": "standalone",
+  "start_url": "/"
 }

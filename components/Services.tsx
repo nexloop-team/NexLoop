@@ -18,13 +18,13 @@ const capabilities: Capability[] = [
   {
     icon: Globe,
     title: "Website design & development",
-    desc: "Minimal, conversion-focused sites in Next.js — custom UI, SEO structure, and performance built in from day one.",
+    desc: "Minimal, conversion-focused sites in Next.js - custom UI, SEO structure, and performance built in from day one.",
     tags: ["Next.js", "Figma", "SEO"],
   },
   {
     icon: Smartphone,
     title: "Web apps & product UI",
-    desc: "Dashboards, landing systems, and mobile apps — clear flows, accessible components, launch-ready builds.",
+    desc: "Dashboards, landing systems, and mobile apps - clear flows, accessible components, launch-ready builds.",
     tags: ["React", "Flutter", "Product"],
   },
   {
@@ -73,7 +73,7 @@ function CapabilityRow({ item, index }: { item: Capability; index: number }) {
   );
 }
 
-/* ── Packages (NO PRICES — outcome-focused) ── */
+/* ── Packages (NO PRICES - outcome-focused) ── */
 type Package = {
   name: string;
   tagline: string;
@@ -97,7 +97,7 @@ const tabs: Tab[] = [
       {
         name: "Growth",
         tagline: "Built to convert",
-        outcome: "A fully custom website engineered to turn visitors into paying customers — with analytics, speed optimization, and ongoing support.",
+        outcome: "A fully custom website engineered to turn visitors into paying customers - with analytics, speed optimization, and ongoing support.",
         includes: ["3–5 pages, custom UI", "Lead capture + CTAs", "SEO + Google Analytics", "Core Web Vitals optimized", "Google Maps integration", "15-day post-launch support"],
         featured: true,
         badge: "Most popular",
@@ -122,7 +122,7 @@ const tabs: Tab[] = [
       {
         name: "Launch",
         tagline: "Ship your MVP",
-        outcome: "A fully functional mobile app with user authentication, push notifications, and API integration — ready for the Play Store.",
+        outcome: "A fully functional mobile app with user authentication, push notifications, and API integration - ready for the Play Store.",
         includes: ["5–7 screens", "Login + user profiles", "Push notifications", "API integration", "Play Store submission", "30-day bug support"],
         featured: true,
         badge: "Most popular",
@@ -130,7 +130,7 @@ const tabs: Tab[] = [
       {
         name: "Catalogue",
         tagline: "Your products, anywhere",
-        outcome: "A product browsing app with search, categories, and WhatsApp ordering — making it easy for customers to buy from you.",
+        outcome: "A product browsing app with search, categories, and WhatsApp ordering - making it easy for customers to buy from you.",
         includes: ["Product listing + categories", "Search + filter", "WhatsApp order button", "Admin panel for updates", "Play Store listing"],
       },
     ],
@@ -141,13 +141,13 @@ const tabs: Tab[] = [
       {
         name: "Quick Start",
         tagline: "Automate your replies",
-        outcome: "Never miss a lead again — automated WhatsApp responses that greet, qualify, and capture every inquiry 24/7.",
+        outcome: "Never miss a lead again - automated WhatsApp responses that greet, qualify, and capture every inquiry 24/7.",
         includes: ["WhatsApp Business setup", "Auto-reply + greeting flow", "Lead capture templates", "Message template design"],
       },
       {
         name: "AI Agent",
         tagline: "Your 24/7 sales rep",
-        outcome: "A GPT-powered chatbot that handles conversations on your website and WhatsApp — qualifying leads, answering FAQs, and handing off to humans.",
+        outcome: "A GPT-powered chatbot that handles conversations on your website and WhatsApp - qualifying leads, answering FAQs, and handing off to humans.",
         includes: ["GPT-powered chatbot", "Website + WhatsApp integration", "FAQ + lead qualification", "CRM handoff", "Human takeover support", "1 month monitoring"],
         featured: true,
         badge: "High demand",
@@ -155,7 +155,7 @@ const tabs: Tab[] = [
       {
         name: "Full Pipeline",
         tagline: "Automate everything",
-        outcome: "End-to-end lead automation: from form submission to CRM entry, follow-up sequences, lead scoring, and pipeline sync — zero manual work.",
+        outcome: "End-to-end lead automation: from form submission to CRM entry, follow-up sequences, lead scoring, and pipeline sync - zero manual work.",
         includes: ["Form → WhatsApp notification", "CRM + email sequences", "Lead scoring + tagging", "Google Sheets / Notion sync", "Setup docs + walkthrough"],
       },
     ],
@@ -267,7 +267,7 @@ export default function Services() {
             <span className="brand-text">grow online</span>.
           </h2>
           <p className="body-lg mt-4 max-w-xl hidden md:block" style={{ color: "var(--fg-secondary)" }}>
-            Focused services with clear deliverables — no bloated retainers, no template shops.
+            Focused services with clear deliverables - no bloated retainers, no template shops.
           </p>
         </motion.div>
 
@@ -278,7 +278,7 @@ export default function Services() {
           ))}
         </motion.div>
 
-        {/* ── Packages — desktop only (keeps mobile page short) ── */}
+        {/* ── Packages - desktop only (keeps mobile page short) ── */}
         <div className="hidden md:block">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -293,7 +293,7 @@ export default function Services() {
               <span className="brand-text">We handle the rest.</span>
             </h2>
             <p className="body-lg mt-4 max-w-xl">
-              Every package includes a free consultation. We&apos;ll recommend the best option for your business — no upselling, no surprises.
+              Every package includes a free consultation. We&apos;ll recommend the best option for your business - no upselling, no surprises.
             </p>
           </motion.div>
 

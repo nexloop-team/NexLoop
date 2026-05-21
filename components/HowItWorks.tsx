@@ -20,7 +20,7 @@ const steps = [
   {
     num: "02",
     title: "Design & build",
-    desc: "Figma layouts, then production in Next.js — custom components, responsive polish, and performance checks throughout.",
+    desc: "Figma layouts, then production in Next.js - custom components, responsive polish, and performance checks throughout.",
     detail: "Clear milestones",
   },
   {

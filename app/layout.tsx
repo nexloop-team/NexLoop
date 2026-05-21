@@ -12,27 +12,21 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexloop.in"),
-  title: "NexLoop | Website Design & Development Studio",
+  title: "NexLoop | Website Design Studio - Websites, Apps & AI",
   description:
-    "NexLoop designs and builds minimal, high-converting websites and digital products with Next.js. Custom design, fast delivery, no templates.",
+    "We design websites and digital products that earn trust. Custom Next.js sites, mobile apps & AI automation - fast delivery, no templates.",
   keywords: [
-    // Primary
-    "AI automation services",
-    "business automation systems",
-    "AI chatbot automation",
-    "lead generation automation",
-    "WhatsApp AI bot",
-    "AI voice agent",
-    "CRM automation",
-    "intelligent automation",
-    // Secondary
-    "AI for small businesses",
-    "AI automation agency",
-    "automated lead capture",
-    "conversational AI systems",
-    "AI automation",
+    "website design studio",
     "website development",
+    "Next.js website",
+    "custom website design",
+    "web design India",
+    "mobile app development",
+    "digital product studio",
+    "conversion-focused web design",
     "WhatsApp automation",
+    "AI chatbot",
+    "business automation",
   ],
   authors: [{ name: "NexLoop", url: "https://nexloop.in" }],
   creator: "NexLoop",
@@ -58,16 +52,16 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://nexloop.in",
     siteName: "NexLoop",
-    title: "NexLoop | Website Design & Development Studio",
+    title: "NexLoop | Website Design Studio - Websites, Apps & AI",
     description:
-      "Minimal, high-converting websites and digital products. Custom Next.js builds — no templates.",
+      "We design websites and digital products that earn trust. Custom Next.js sites, mobile apps & AI automation - fast delivery, no templates.",
     locale: "en_US",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "NexLoop - AI Automation for Modern Businesses",
+        alt: "NexLoop - Website design studio for websites, apps & AI automation",
       },
     ],
   },
@@ -75,9 +69,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@nexloopapp",
     creator: "@nexloopapp",
-    title: "NexLoop | Website Design & Development Studio",
+    title: "NexLoop | Website Design Studio - Websites, Apps & AI",
     description:
-      "Minimal, high-converting websites and digital products. Custom Next.js builds — no templates.",
+      "We design websites and digital products that earn trust. Custom Next.js sites, mobile apps & AI automation - fast delivery, no templates.",
     images: ["/og-image.png"],
   },
 };
@@ -87,7 +81,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "NexLoop",
   url: "https://nexloop.in",
-  logo: "https://nexloop.in/icon0.svg",
+  logo: "https://nexloop.in/icon1.png",
   description:
     "NexLoop is a website design and development studio building minimal, high-converting sites and digital products with Next.js.",
   contactPoint: {
@@ -104,66 +98,62 @@ const organizationSchema = {
   ],
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "NexLoop",
+  url: "https://nexloop.in",
+  description:
+    "Website design studio building custom Next.js websites, mobile apps, and AI automation for growing businesses.",
+  publisher: {
+    "@type": "Organization",
+    name: "NexLoop",
+    url: "https://nexloop.in",
+  },
+};
+
 const serviceSchema = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: "AI Automation Services",
+  "@type": "ProfessionalService",
+  name: "NexLoop - Website Design & Development",
+  url: "https://nexloop.in",
+  description:
+    "NexLoop designs and builds minimal, high-converting websites and digital products with Next.js, plus mobile apps and automation when you need them.",
+  areaServed: "Worldwide",
   provider: {
     "@type": "Organization",
     name: "NexLoop",
     url: "https://nexloop.in",
   },
-  name: "AI Automation & Business Automation Systems",
-  description:
-    "NexLoop provides end-to-end AI automation services including AI chatbot automation, WhatsApp AI bots, AI voice agents, lead generation automation, CRM automation, and business automation systems for growth-focused businesses.",
-  areaServed: "Worldwide",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "AI Automation Services",
+    name: "NexLoop Services",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "AI Chatbot Automation",
+          name: "Website Design & Development",
           description:
-            "Conversational AI systems that automate customer interactions, qualify leads, and book appointments 24/7.",
+            "Custom Next.js websites with conversion-focused design, SEO structure, and performance built in from day one.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "WhatsApp AI Bot",
+          name: "Web Apps & Mobile Apps",
           description:
-            "Intelligent WhatsApp automation for lead qualification, follow-ups, and customer support via the WhatsApp Business API.",
+            "Product UI, dashboards, and Flutter mobile apps with clear flows and launch-ready builds.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "AI Voice Agent",
+          name: "Automation & AI",
           description:
-            "AI-powered voice agents that handle inbound and outbound calls, qualify prospects, and schedule meetings automatically.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Lead Generation Automation",
-          description:
-            "Automated lead capture, qualification, and nurture systems that generate 3x more leads without manual effort.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "CRM Automation",
-          description:
-            "End-to-end CRM automation that syncs leads, triggers follow-ups, and keeps your pipeline updated automatically.",
+            "WhatsApp flows, AI chatbots, and CRM automation that qualify leads and reduce manual follow-up.",
         },
       },
     ],
@@ -184,6 +174,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <Script
+          id="schema-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
         <Script

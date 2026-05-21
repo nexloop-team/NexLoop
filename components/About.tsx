@@ -8,7 +8,7 @@ const ACCENT = "var(--accent)";
 const principles = [
   {
     title: "No templates",
-    desc: "Every layout is designed for your brand — not a ThemeForest reskin.",
+    desc: "Every layout is designed for your brand - not a ThemeForest reskin.",
     icon: Code2,
   },
   {
@@ -46,7 +46,7 @@ export default function About() {
               and automation where it actually saves time.
             </p>
             <p className="body-md mt-3 md:hidden" style={{ color: "var(--fg-secondary)" }}>
-              Design-led studio — websites, apps &amp; automation. Fast delivery, no templates.
+              Design-led studio - websites, apps &amp; automation. Fast delivery, no templates.
             </p>
             <ul className="mt-6 md:mt-8 space-y-2 md:space-y-3">
               {["Figma → Next.js → Vercel", "India-based · working globally", "Reply within 24 hours"].map(

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, Loader2, CheckCircle, AlertCircle, Mail, Phone, X, Shield, Clock, Star } from "lucide-react";
+import { useIsMobile } from "@/lib/useIsMobile";
 
 interface FormState { name: string; email: string; business: string; message: string; }
 type Status = "idle" | "loading" | "success" | "error";
@@ -14,6 +15,7 @@ const guarantees = [
 ];
 
 export default function CTA() {
+  const isMobile = useIsMobile();
   const [form, setForm] = useState<FormState>({ name: "", email: "", business: "", message: "" });
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -66,20 +68,29 @@ export default function CTA() {
         </motion.div>
       )}
 
-      <section id="contact" ref={ref} className="relative section-pad px-5 sm:px-8 section-gradient-2 grain-overlay overflow-hidden">
-        <div className="relative z-10 max-w-5xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+      <section id="contact" ref={ref} className="relative section-pad contact-section section-gradient-2 grain-overlay overflow-hidden">
+        <div className="container-xl relative z-10 contact-inner">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 w-full">
 
             {/* Left */}
-            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium mb-6" style={{ background: 'var(--accent-subtle)', border: '1px solid var(--border)', color: 'var(--fg-secondary)' }}>
-                <span className="w-2 h-2 rounded-full" style={{ background: 'var(--accent)' }} /> Get in touch
+            <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 w-full min-w-0 contact-copy">
+              <div className="contact-badge inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-medium mb-6" style={{ background: 'var(--accent-subtle)', border: '1px solid var(--border)', color: 'var(--fg-secondary)' }}>
+                <span className="w-2 h-2 rounded-full shrink-0" style={{ background: 'var(--accent)' }} /> Get in touch
               </div>
-              <h2 className="headline-lg">Have a project?<br /><span className="brand-text">Let&apos;s talk.</span></h2>
-              <p className="body-lg mt-4 max-w-md hidden md:block">Book a free 30-minute consultation. We&apos;ll analyze your business and give you a custom roadmap — no strings attached.</p>
-              <p className="body-md mt-3 md:hidden" style={{ color: "var(--fg-secondary)" }}>
+              <h2 className="headline-lg contact-title">Have a project?<br /><span className="brand-text">Let&apos;s talk.</span></h2>
+              <p className="body-lg mt-4 max-w-md hidden md:block">Book a free 30-minute consultation. We&apos;ll analyze your business and give you a custom roadmap - no strings attached.</p>
+              <p className="body-md mt-3 md:hidden contact-subtitle" style={{ color: "var(--fg-secondary)" }}>
                 Free 30-min call · Reply within 24 hours.
               </p>
+
+              <div className="mt-5 space-y-2 md:hidden contact-mobile-links">
+                <a href="mailto:team.nexloop@gmail.com" className="flex items-start gap-2.5 body-sm" style={{ color: 'var(--fg-muted)' }}>
+                  <Mail size={14} className="shrink-0 mt-0.5" /> <span>team.nexloop@gmail.com</span>
+                </a>
+                <a href="tel:+919511875269" className="flex items-center gap-2.5 body-sm" style={{ color: 'var(--fg-muted)' }}>
+                  <Phone size={14} className="shrink-0" /> +91 9511875269
+                </a>
+              </div>
 
               <div className="mt-6 md:mt-8 space-y-3 hidden md:block">
                 {guarantees.map(({ icon: Icon, text }) => (
@@ -102,8 +113,11 @@ export default function CTA() {
               </div>
             </motion.div>
 
-            {/* Right — Form */}
-            <motion.div style={{ y: formY, opacity: formOpacity }} className="flex-1 lg:max-w-md">
+            {/* Right - Form */}
+            <motion.div
+              style={isMobile ? undefined : { y: formY, opacity: formOpacity }}
+              className="flex-1 w-full min-w-0 lg:max-w-md contact-form-col"
+            >
               {status === "success" ? (
                 <div className="card p-10 flex flex-col items-center text-center gap-4">
                   <motion.div initial={{ scale: 0.5 }} animate={{ scale: 1 }} transition={{ type: "spring", stiffness: 200, damping: 18 }}>

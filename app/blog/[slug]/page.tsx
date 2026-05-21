@@ -17,7 +17,12 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(params.slug);
-  if (!post) return {};
+  if (!post) {
+    return {
+      title: "Article not found | NexLoop",
+      robots: { index: false, follow: false },
+    };
+  }
 
   return {
     title: `${post.title} | NexLoop Blog`,
@@ -65,7 +70,7 @@ export default function BlogPostPage({ params }: Props) {
       "@type": "Organization",
       name: "NexLoop",
       url: "https://nexloop.in",
-      logo: { "@type": "ImageObject", url: "https://nexloop.in/icon.svg" },
+      logo: { "@type": "ImageObject", url: "https://nexloop.in/icon1.png" },
     },
     datePublished: post.publishedAt,
     dateModified: post.publishedAt,

@@ -7,7 +7,7 @@ const ACCENT = "var(--accent)";
 
 const featured = {
   quote:
-    "They delivered a clean, fast site with clear messaging. The process was straightforward — scope, design, build, launch — without the usual agency noise.",
+    "They delivered a clean, fast site with clear messaging. The process was straightforward - scope, design, build, launch - without the usual agency noise.",
   name: "Client partner",
   role: "Founder · Growth business",
   initials: "CP",
@@ -44,7 +44,7 @@ export default function Testimonials() {
             Trusted when the <span className="brand-text">details matter</span>.
           </h2>
           <p className="body-lg mt-4 max-w-lg hidden md:block" style={{ color: "var(--fg-secondary)" }}>
-            Replace these placeholders with real quotes and photos as you collect them — honest proof beats inflated stats.
+            Replace these placeholders with real quotes and photos as you collect them - honest proof beats inflated stats.
           </p>
         </motion.div>
 

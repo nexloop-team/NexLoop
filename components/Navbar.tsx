@@ -7,13 +7,15 @@ import { useTheme } from "./ThemeProvider";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import WhatsAppIcon, { WHATSAPP_URL } from "./WhatsAppIcon";
 
-type NavLink = { label: string; href: string; id: string };
+type NavLink = { label: string; href: string; id: string; page?: boolean };
 
 const navLinks: NavLink[] = [
   { label: "Work", href: "/#portfolio", id: "portfolio" },
   { label: "Services", href: "/#services", id: "services" },
   { label: "About", href: "/#about", id: "about" },
+  { label: "Blog", href: "/blog", id: "blog", page: true },
   { label: "Contact", href: "/#contact", id: "contact" },
 ];
 
@@ -53,12 +55,9 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   useEffect(() => {
-    if (pathname !== "/") {
-      setActiveSection("services");
-      return;
-    }
+    if (pathname !== "/") return;
 
-    const ids = navLinks.map((link) => link.id);
+    const ids = navLinks.filter((link) => !link.page).map((link) => link.id);
     const sections = ids
       .map((id) => document.getElementById(id))
       .filter((section): section is HTMLElement => Boolean(section));
@@ -93,28 +92,27 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-nav" : ""}`}
         style={{ padding: scrolled ? "10px 0" : "16px 0" }}
       >
-        <div className="container-xl flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5 group" aria-label="NexLoop Home">
-            <motion.div
-              whileHover={{ scale: 1.05, rotate: 2 }}
-              transition={{ type: "spring", stiffness: 300, damping: 18 }}
-              className="flex items-center"
-            >
+        <div className="container-xl flex items-center justify-between gap-3">
+          <Link href="/" className="nav-brand group" aria-label="NexLoop Home">
+            <div className="nav-brand-logo-wrap">
               <Image
                 src="/logo1.png"
                 alt="NexLoop"
                 width={200}
                 height={48}
                 priority
-                className="logo-mark h-[36px] w-auto origin-left scale-[4.9]"
+                sizes="176px"
+                className="logo-mark nav-brand-logo"
               />
-            </motion.div>
+            </div>
           </Link>
 
           <nav className="hidden md:flex items-center" aria-label="Main navigation">
             <div className={`nav-dock ${scrolled ? "nav-dock-scrolled" : ""}`}>
               {navLinks.map((link) => {
-                const isActive = link.id === activeSection;
+                const isActive = link.page
+                  ? pathname.startsWith("/blog")
+                  : pathname === "/" && link.id === activeSection;
                 return (
                   <Link
                     key={link.label}
@@ -136,6 +134,15 @@ export default function Navbar() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="theme-toggle"
+              aria-label="Chat on WhatsApp"
+            >
+              <WhatsAppIcon size={15} />
+            </a>
             <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
@@ -154,7 +161,17 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="md:hidden flex items-center gap-2">
+          <div className="md:hidden flex items-center gap-1.5 shrink-0">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="theme-toggle"
+              style={{ width: 34, height: 34 }}
+              aria-label="Chat on WhatsApp"
+            >
+              <WhatsAppIcon size={14} />
+            </a>
             <button onClick={toggleTheme} className="theme-toggle" style={{ width: 34, height: 34 }} aria-label="Toggle theme">
               {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
             </button>
@@ -202,16 +219,32 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -16, scale: 0.97 }}
               transition={{ duration: 0.28, ease: [0.23, 1, 0.32, 1] }}
-              className="fixed top-[68px] left-4 right-4 z-50 rounded-2xl p-5 md:hidden"
+              className="fixed top-[76px] left-4 right-4 z-50 rounded-2xl p-5 md:hidden max-h-[calc(100dvh-5.5rem)] overflow-y-auto"
               style={{
                 background: "var(--bg-card)",
                 border: "1px solid var(--border)",
                 boxShadow: "var(--shadow-xl)",
               }}
             >
+              <div className="nav-mobile-info">
+                <p className="nav-mobile-info-title">Digital product studio</p>
+                <p className="nav-mobile-info-desc">
+                  We design websites, build mobile apps, and set up AI automation so your business can grow faster.
+                </p>
+                <div className="nav-mobile-info-actions">
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="nav-mobile-info-link">
+                    <WhatsAppIcon size={13} /> WhatsApp
+                  </a>
+                  <a href="tel:+919511875269" className="nav-mobile-info-link">
+                    +91 9511875269
+                  </a>
+                </div>
+              </div>
               <nav className="flex flex-col gap-1 mb-4" aria-label="Mobile navigation">
                 {navLinks.map((link, i) => {
-                  const isActive = link.id === activeSection;
+                  const isActive = link.page
+                  ? pathname.startsWith("/blog")
+                  : pathname === "/" && link.id === activeSection;
                   return (
                     <motion.div
                       key={link.label}

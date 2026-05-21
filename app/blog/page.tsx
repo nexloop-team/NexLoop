@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Link from "next/link";
 import { ArrowUpRight, Clock, Calendar, Tag } from "lucide-react";
 import { blogPosts, formatDate } from "@/lib/blog";
@@ -6,9 +7,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Blog | NexLoop — AI Automation & Digital Growth Insights",
+  title: "Blog | NexLoop - Web Design, Apps & Growth Insights",
   description:
-    "Expert guides on AI automation, WhatsApp marketing, web design, lead generation, and digital growth strategies for modern businesses.",
+    "Free guides on web design, Next.js websites, mobile apps, WhatsApp automation, and lead generation. Tips from NexLoop to grow traffic and conversions.",
   keywords: [
     "AI automation blog",
     "WhatsApp marketing automation",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://nexloop.in/blog",
-    title: "NexLoop Blog — AI Automation & Digital Growth",
+    title: "NexLoop Blog - Web Design, Apps & Growth",
     description:
       "Expert guides on AI automation, WhatsApp marketing, web design, and lead generation.",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
@@ -32,12 +33,40 @@ export const metadata: Metadata = {
 
 const categories = ["All", "AI Automation", "Marketing", "Design", "Lead Generation", "CRM", "Strategy"];
 
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "NexLoop Blog",
+  url: "https://nexloop.in/blog",
+  description:
+    "Articles on website design, mobile apps, AI automation, and digital growth for businesses in India and worldwide.",
+  publisher: {
+    "@type": "Organization",
+    name: "NexLoop",
+    url: "https://nexloop.in",
+    logo: { "@type": "ImageObject", url: "https://nexloop.in/icon1.png" },
+  },
+  blogPost: blogPosts.map((post) => ({
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    url: `https://nexloop.in/blog/${post.slug}`,
+    datePublished: post.publishedAt,
+    author: { "@type": "Person", name: post.author },
+  })),
+};
+
 export default function BlogPage() {
   const featured = blogPosts.find((p) => p.featured);
   const rest = blogPosts.filter((p) => !p.featured);
 
   return (
     <>
+      <Script
+        id="schema-blog"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
       <Navbar />
       <main className="min-h-screen" style={{ background: "var(--bg)" }}>
 
@@ -55,12 +84,12 @@ export default function BlogPage() {
             <div className="max-w-3xl">
               <span className="eyebrow mb-6">NexLoop Blog</span>
               <h1 className="headline-xl mt-6 leading-tight">
-                Insights to{" "}
-                <span className="brand-text">grow faster</span>{" "}
-                in the AI era.
+                Insights on{" "}
+                <span className="brand-text">websites, apps</span>{" "}
+                &amp; growth.
               </h1>
               <p className="body-xl mt-5 max-w-xl">
-                Expert guides on AI automation, digital growth, web design, and marketing strategies — written by practitioners, not theorists.
+                Practical guides on web design, Next.js development, automation, and marketing - built to help your site rank and convert.
               </p>
             </div>
 

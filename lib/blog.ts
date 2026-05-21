@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "ai-automation-guide-for-businesses",
     title: "The Complete Guide to AI Automation for Small Businesses in 2025",
-    description: "Learn how small businesses are using AI automation to 3x their leads, cut costs, and free up 20+ hours per week — without technical expertise.",
+    description: "Learn how small businesses are using AI automation to 3x their leads, cut costs, and free up 20+ hours per week   without technical expertise.",
     category: "AI Automation",
     author: "Atharva Deshmukh",
     authorRole: "Founder, NexLoop",
@@ -40,19 +40,19 @@ export const blogPosts: BlogPost[] = [
     tags: ["AI", "Automation", "Small Business", "Lead Generation"],
     featured: true,
     content: {
-      intro: "Artificial intelligence is no longer just for enterprise companies with million-dollar budgets. In 2025, AI automation has become the single most powerful lever a small business can pull to grow faster, serve customers better, and operate more efficiently — all at a fraction of the cost of hiring.",
+      intro: "Artificial intelligence is no longer just for enterprise companies with million-dollar budgets. In 2025, AI automation has become the single most powerful lever a small business can pull to grow faster, serve customers better, and operate more efficiently   all at a fraction of the cost of hiring.",
       sections: [
         {
           heading: "What Is AI Automation (And Why Does It Matter)?",
-          body: "AI automation refers to using artificial intelligence to perform repetitive tasks that would otherwise require human time and attention. Think: answering customer questions, qualifying leads, booking appointments, sending follow-up messages, and syncing data between tools. For a small business owner, these tasks consume hours every day. AI automation handles them 24/7, instantly, and at scale — so you can focus on growth, strategy, and the work only you can do.",
+          body: "AI automation refers to using artificial intelligence to perform repetitive tasks that would otherwise require human time and attention. Think: answering customer questions, qualifying leads, booking appointments, sending follow-up messages, and syncing data between tools. For a small business owner, these tasks consume hours every day. AI automation handles them 24/7, instantly, and at scale   so you can focus on growth, strategy, and the work only you can do.",
         },
         {
           heading: "The 5 Highest-ROI AI Automations for Small Businesses",
-          body: "1. AI Chatbots: Deploy a GPT-powered chatbot on your website and WhatsApp. It answers FAQs, qualifies leads, and books calls — even at 2am. Businesses using AI chatbots report 3x more qualified leads within the first month. 2. WhatsApp Automation: WhatsApp has a 98% open rate. Automating your WhatsApp follow-ups means no lead ever slips through the cracks. 3. CRM Automation: Automatically capture leads from forms, sync them to your CRM, score them, and trigger personalized follow-up sequences. 4. AI Voice Agents: Handle inbound calls, answer common questions, and route serious prospects to a human — without hiring a receptionist. 5. Automated Reporting: Get weekly performance summaries delivered to your inbox without lifting a finger.",
+          body: "1. AI Chatbots: Deploy a GPT-powered chatbot on your website and WhatsApp. It answers FAQs, qualifies leads, and books calls   even at 2am. Businesses using AI chatbots report 3x more qualified leads within the first month. 2. WhatsApp Automation: WhatsApp has a 98% open rate. Automating your WhatsApp follow-ups means no lead ever slips through the cracks. 3. CRM Automation: Automatically capture leads from forms, sync them to your CRM, score them, and trigger personalized follow-up sequences. 4. AI Voice Agents: Handle inbound calls, answer common questions, and route serious prospects to a human   without hiring a receptionist. 5. Automated Reporting: Get weekly performance summaries delivered to your inbox without lifting a finger.",
         },
         {
           heading: "How Much Does AI Automation Cost?",
-          body: "This is the question that surprises most business owners. At NexLoop, a fully functional AI chatbot setup starts at ₹9,999 — less than the cost of one month of a part-time employee. The ROI is immediate. If your chatbot closes just one extra lead per month that your team would have missed, it pays for itself. Most clients see 5–10x ROI within 60 days.",
+          body: "This is the question that surprises most business owners. At NexLoop, a fully functional AI chatbot setup starts at ₹9,999   less than the cost of one month of a part-time employee. The ROI is immediate. If your chatbot closes just one extra lead per month that your team would have missed, it pays for itself. Most clients see 5–10x ROI within 60 days.",
         },
         {
           heading: "Getting Started: The Right Order",
@@ -60,10 +60,10 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "Real Results from Real Businesses",
-          body: "Marcus Torres, a real estate agency owner, went from 12 to 40+ showings per month after implementing NexLoop's WhatsApp AI. Dr. Priya Nair's health clinic cut no-shows by 40% using an AI booking assistant. A coaching business owner went from 3 to 15+ discovery calls per week without running any ads — just by having a chatbot qualify and book visitors from his website.",
+          body: "Marcus Torres, a real estate agency owner, went from 12 to 40+ showings per month after implementing NexLoop's WhatsApp AI. Dr. Priya Nair's health clinic cut no-shows by 40% using an AI booking assistant. A coaching business owner went from 3 to 15+ discovery calls per week without running any ads   just by having a chatbot qualify and book visitors from his website.",
         },
       ],
-      conclusion: "AI automation isn't the future — it's the present. The businesses winning right now are the ones who adopted it early. If you're still manually answering DMs, chasing leads, and copying data between spreadsheets, you're leaving serious money on the table. Book a free consultation with NexLoop and we'll map out exactly which automations will have the biggest impact on your business — in 30 minutes, free.",
+      conclusion: "AI automation isn't the future   it's the present. The businesses winning right now are the ones who adopted it early. If you're still manually answering DMs, chasing leads, and copying data between spreadsheets, you're leaving serious money on the table. Book a free consultation with NexLoop and we'll map out exactly which automations will have the biggest impact on your business   in 30 minutes, free.",
     },
   },
   {
@@ -85,28 +85,28 @@ export const blogPosts: BlogPost[] = [
       sections: [
         {
           heading: "Why WhatsApp Is India's Best Sales Channel",
-          body: "With over 500 million users in India alone, WhatsApp isn't just a messaging app — it's where business gets done. Customers expect to be able to reach you there, and they act faster when you meet them on WhatsApp than any other channel. The conversion rates from WhatsApp conversations are consistently 3–5x higher than email or web forms.",
+          body: "With over 500 million users in India alone, WhatsApp isn't just a messaging app   it's where business gets done. Customers expect to be able to reach you there, and they act faster when you meet them on WhatsApp than any other channel. The conversion rates from WhatsApp conversations are consistently 3–5x higher than email or web forms.",
         },
         {
           heading: "Setting Up the WhatsApp Business API",
-          body: "The WhatsApp Business API is what separates basic WhatsApp Business (the app) from a true automation engine. With the API, you can: send automated messages at scale, integrate with your CRM, trigger messages based on actions (form submissions, purchases, etc.), and use AI to handle conversations. NexLoop handles the full setup — from getting verified to building your first automated flow.",
+          body: "The WhatsApp Business API is what separates basic WhatsApp Business (the app) from a true automation engine. With the API, you can: send automated messages at scale, integrate with your CRM, trigger messages based on actions (form submissions, purchases, etc.), and use AI to handle conversations. NexLoop handles the full setup   from getting verified to building your first automated flow.",
         },
         {
           heading: "The 3 Automation Flows Every Business Needs",
-          body: "Flow 1 — Lead Capture: When someone fills out a form on your website, they get an instant WhatsApp message with a personalised greeting and next steps. Response rate: 40–60%. Flow 2 — Follow-Up Sequence: 3-message sequence over 7 days for leads who haven't responded. Most sales happen in the follow-up. Flow 3 — Booking Confirmation + Reminders: Automatically confirm appointments and send reminders. Cut no-shows by up to 40%.",
+          body: "Flow 1   Lead Capture: When someone fills out a form on your website, they get an instant WhatsApp message with a personalised greeting and next steps. Response rate: 40–60%. Flow 2   Follow-Up Sequence: 3-message sequence over 7 days for leads who haven't responded. Most sales happen in the follow-up. Flow 3   Booking Confirmation + Reminders: Automatically confirm appointments and send reminders. Cut no-shows by up to 40%.",
         },
         {
           heading: "AI-Powered WhatsApp: The Next Level",
-          body: "Basic automation sends pre-set messages. AI-powered WhatsApp can actually have two-way conversations, answer questions, qualify leads with dynamic questions, and hand off to a human when needed. At NexLoop, we build GPT-4 powered WhatsApp bots that feel genuinely human — and convert at rates that surprise even our most sceptical clients.",
+          body: "Basic automation sends pre-set messages. AI-powered WhatsApp can actually have two-way conversations, answer questions, qualify leads with dynamic questions, and hand off to a human when needed. At NexLoop, we build GPT-4 powered WhatsApp bots that feel genuinely human   and convert at rates that surprise even our most sceptical clients.",
         },
       ],
-      conclusion: "WhatsApp automation is one of the fastest ROI investments a business can make. Setup takes 1–2 days, and the results are immediate. If you're in India and you're not automating WhatsApp, you're behind. Let's fix that — book a free session with NexLoop and we'll build your first flow together.",
+      conclusion: "WhatsApp automation is one of the fastest ROI investments a business can make. Setup takes 1–2 days, and the results are immediate. If you're in India and you're not automating WhatsApp, you're behind. Let's fix that   book a free session with NexLoop and we'll build your first flow together.",
     },
   },
   {
     slug: "web-design-trends-2025",
     title: "Web Design Trends 2025: What Award-Winning Sites Are Doing Differently",
-    description: "From bento grids to scroll-triggered animations — here are the design patterns that separate average websites from conversion machines in 2025.",
+    description: "From bento grids to scroll-triggered animations   here are the design patterns that separate average websites from conversion machines in 2025.",
     category: "Design",
     author: "Atharva Deshmukh",
     authorRole: "Founder, NexLoop",
@@ -118,7 +118,7 @@ export const blogPosts: BlogPost[] = [
     coverIcon: "🎨",
     tags: ["Web Design", "UI/UX", "Trends", "Conversion"],
     content: {
-      intro: "In 2025, a website isn't just a digital brochure — it's your highest-leverage sales asset. The gap between an average website and an award-winning one isn't budget; it's intentionality. Here are the design patterns that top agencies are using to build sites that genuinely convert.",
+      intro: "In 2025, a website isn't just a digital brochure   it's your highest-leverage sales asset. The gap between an average website and an award-winning one isn't budget; it's intentionality. Here are the design patterns that top agencies are using to build sites that genuinely convert.",
       sections: [
         {
           heading: "1. Bento Grid Layouts",
@@ -126,7 +126,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "2. Scroll-Triggered Animations",
-          body: "Static pages feel dead in 2025. Scroll-triggered animations — where elements gracefully fade, slide, or scale into view as users scroll — make your site feel alive and premium. The key is restraint: every animation should serve a purpose (revealing content at the right moment) not just look flashy. Libraries like Framer Motion make this achievable without performance sacrifice.",
+          body: "Static pages feel dead in 2025. Scroll-triggered animations   where elements gracefully fade, slide, or scale into view as users scroll   make your site feel alive and premium. The key is restraint: every animation should serve a purpose (revealing content at the right moment) not just look flashy. Libraries like Framer Motion make this achievable without performance sacrifice.",
         },
         {
           heading: "3. Hero Parallax Effects",
@@ -138,10 +138,10 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "5. Dark/Light Mode as a Feature",
-          body: "Offering both dark and light mode isn't just a nice-to-have — it signals that your product is polished and your team cares about detail. Users who engage with the theme toggle tend to spend 40% longer on site. It's a micro-interaction that builds trust.",
+          body: "Offering both dark and light mode isn't just a nice-to-have   it signals that your product is polished and your team cares about detail. Users who engage with the theme toggle tend to spend 40% longer on site. It's a micro-interaction that builds trust.",
         },
       ],
-      conclusion: "Great web design in 2025 is about creating a feeling — premium, trustworthy, fast, intentional. Every pixel should earn its place. At NexLoop, we obsess over these details so your website does the selling for you. Ready to see what your site could look like? Let's talk.",
+      conclusion: "Great web design in 2025 is about creating a feeling   premium, trustworthy, fast, intentional. Every pixel should earn its place. At NexLoop, we obsess over these details so your website does the selling for you. Ready to see what your site could look like? Let's talk.",
     },
   },
   {
@@ -159,19 +159,19 @@ export const blogPosts: BlogPost[] = [
     coverIcon: "🎯",
     tags: ["Lead Generation", "AI", "Sales", "Conversion"],
     content: {
-      intro: "Most businesses have a lead generation problem that's actually a lead conversion problem. They get traffic, they get form submissions — but leads go cold, follow-ups get missed, and opportunities slip away. AI changes the entire equation. Here are 7 strategies that the most successful businesses in 2025 are using.",
+      intro: "Most businesses have a lead generation problem that's actually a lead conversion problem. They get traffic, they get form submissions   but leads go cold, follow-ups get missed, and opportunities slip away. AI changes the entire equation. Here are 7 strategies that the most successful businesses in 2025 are using.",
       sections: [
         {
           heading: "Strategy 1: Instant AI Response to Every Inquiry",
-          body: "The data is clear: responding to a lead within 5 minutes makes you 100x more likely to convert them. AI makes this possible at any scale. When a form is submitted, your AI instantly sends a personalised WhatsApp or email message, answers initial questions, and schedules a consultation — before a human even knows the lead came in.",
+          body: "The data is clear: responding to a lead within 5 minutes makes you 100x more likely to convert them. AI makes this possible at any scale. When a form is submitted, your AI instantly sends a personalised WhatsApp or email message, answers initial questions, and schedules a consultation   before a human even knows the lead came in.",
         },
         {
           heading: "Strategy 2: AI Lead Scoring",
-          body: "Not all leads are equal. AI lead scoring analyses signals — pages visited, questions asked, business size, response patterns — to give each lead a priority score. Your team focuses only on high-score leads while the AI nurtures the rest automatically. This alone can double the productivity of a sales team.",
+          body: "Not all leads are equal. AI lead scoring analyses signals   pages visited, questions asked, business size, response patterns   to give each lead a priority score. Your team focuses only on high-score leads while the AI nurtures the rest automatically. This alone can double the productivity of a sales team.",
         },
         {
           heading: "Strategy 3: Conversational Landing Pages",
-          body: "A static form is passive. A conversational landing page — where visitors answer a few questions in a chat interface — is active and engaging. Conversational forms convert at 2–3x the rate of traditional forms, and they collect richer data for personalization.",
+          body: "A static form is passive. A conversational landing page   where visitors answer a few questions in a chat interface   is active and engaging. Conversational forms convert at 2–3x the rate of traditional forms, and they collect richer data for personalization.",
         },
         {
           heading: "Strategy 4: Reactivation Campaigns",
@@ -187,10 +187,10 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "Strategy 7: AI-Powered Ad Targeting",
-          body: "AI advertising optimization — letting Meta and Google's algorithms find your best customers based on your existing customer data — consistently outperforms manual targeting. Feed your AI the data (from your CRM), and let it find people who look exactly like your best clients.",
+          body: "AI advertising optimization   letting Meta and Google's algorithms find your best customers based on your existing customer data   consistently outperforms manual targeting. Feed your AI the data (from your CRM), and let it find people who look exactly like your best clients.",
         },
       ],
-      conclusion: "Lead generation in 2025 isn't about working harder — it's about building systems that work while you sleep. At NexLoop, we design and implement exactly these systems for businesses across India. The average client goes from 5 to 20+ leads per week within the first 30 days. Want to see what's possible for your business? Start with a free strategy call.",
+      conclusion: "Lead generation in 2025 isn't about working harder   it's about building systems that work while you sleep. At NexLoop, we design and implement exactly these systems for businesses across India. The average client goes from 5 to 20+ leads per week within the first 30 days. Want to see what's possible for your business? Start with a free strategy call.",
     },
   },
   {
@@ -208,7 +208,7 @@ export const blogPosts: BlogPost[] = [
     coverIcon: "📊",
     tags: ["CRM", "Automation", "Sales Pipeline", "Small Business"],
     content: {
-      intro: "The average small business loses 27% of its leads due to slow follow-up and poor tracking. If you're managing your leads in a spreadsheet — or worse, in your inbox — you're in this category. Here's how CRM automation fixes this, permanently.",
+      intro: "The average small business loses 27% of its leads due to slow follow-up and poor tracking. If you're managing your leads in a spreadsheet   or worse, in your inbox   you're in this category. Here's how CRM automation fixes this, permanently.",
       sections: [
         {
           heading: "The Real Cost of Manual CRM Management",
@@ -224,10 +224,10 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "Tools We Use (And Why)",
-          body: "We integrate with HubSpot, Notion, Google Sheets, Airtable, and custom solutions based on your needs. Zapier and Make (formerly Integromat) are our integration layers of choice. The toolset matters less than the workflow design — and that's where NexLoop's expertise comes in.",
+          body: "We integrate with HubSpot, Notion, Google Sheets, Airtable, and custom solutions based on your needs. Zapier and Make (formerly Integromat) are our integration layers of choice. The toolset matters less than the workflow design   and that's where NexLoop's expertise comes in.",
         },
       ],
-      conclusion: "CRM automation is the foundation of every high-performing sales operation. Without it, you're driving with your eyes closed. With it, you have complete visibility and control over your pipeline — and your team can focus on closing, not admin. Let's build your automated CRM in 48 hours.",
+      conclusion: "CRM automation is the foundation of every high-performing sales operation. Without it, you're driving with your eyes closed. With it, you have complete visibility and control over your pipeline   and your team can focus on closing, not admin. Let's build your automated CRM in 48 hours.",
     },
   },
   {
@@ -257,20 +257,26 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "The Middle Ground: Progressive Web Apps",
-          body: "Progressive Web Apps (PWAs) offer many app-like features — offline support, push notifications, home screen installation — at a fraction of the cost of a native app. If you need some app-like capabilities but aren't ready for the full investment, PWAs are worth considering.",
+          body: "Progressive Web Apps (PWAs) offer many app-like features   offline support, push notifications, home screen installation   at a fraction of the cost of a native app. If you need some app-like capabilities but aren't ready for the full investment, PWAs are worth considering.",
         },
         {
           heading: "Cost Comparison (India, 2025)",
-          body: "A high-quality business website: ₹8,999–₹15,000 (one-time). A basic Android app: ₹7,999–₹12,000. A full-featured MVP app: ₹12,000–₹25,000. Ongoing maintenance: ₹999–₹2,499/month. The real question isn't \"which costs less?\" — it's \"which will generate the most ROI given my specific business model?\"",
+          body: "A high-quality business website: ₹8,999–₹15,000 (one-time). A basic Android app: ₹7,999–₹12,000. A full-featured MVP app: ₹12,000–₹25,000. Ongoing maintenance: ₹999–₹2,499/month. The real question isn't \"which costs less?\"   it's \"which will generate the most ROI given my specific business model?\"",
         },
       ],
-      conclusion: "The right answer is almost always: start with a great website, then add an app when your user base and business model justify it. At NexLoop, we help you make this decision with a free strategy session — and then we build whichever option is right for you, fast.",
+      conclusion: "The right answer is almost always: start with a great website, then add an app when your user base and business model justify it. At NexLoop, we help you make this decision with a free strategy session   and then we build whichever option is right for you, fast.",
     },
   },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   return blogPosts.find((p) => p.slug === slug);
+}
+
+export function getLatestPosts(limit = 3): BlogPost[] {
+  return [...blogPosts]
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .slice(0, limit);
 }
 
 export function getRelatedPosts(slug: string, limit = 3): BlogPost[] {

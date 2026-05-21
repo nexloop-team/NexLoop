@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, ArrowUpRight, Twitter, Linkedin, Instagram, Sparkles } from "lucide-react";
 import Link from "next/link";
+import WhatsAppIcon, { WHATSAPP_URL } from "./WhatsAppIcon";
 
 const footerLinks = {
   Company: [
@@ -28,6 +29,7 @@ const footerLinks = {
 };
 
 const socials = [
+  { icon: WhatsAppIcon, href: WHATSAPP_URL, label: "WhatsApp" },
   { icon: Twitter, href: "https://twitter.com/nexloopapp", label: "Twitter" },
   { icon: Linkedin, href: "https://linkedin.com/company/nexloop", label: "LinkedIn" },
   { icon: Instagram, href: "https://instagram.com/nexloopapp", label: "Instagram" },
@@ -37,7 +39,7 @@ export default function Footer() {
   return (
     <footer className="relative" style={{ borderTop: "1px solid var(--border)" }}>
 
-      {/* Big CTA Strip — desktop (mobile uses sticky bar + contact section) */}
+      {/* Big CTA Strip   desktop (mobile uses sticky bar + contact section) */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -81,7 +83,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="body-md mt-3 max-w-md mx-auto"
           >
-            Let&apos;s turn your idea into a product that works — and a system that grows.
+            Let&apos;s turn your idea into a product that works - and a system that grows.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -102,40 +104,34 @@ export default function Footer() {
       </motion.div>
 
       {/* Footer grid */}
-      <div className="container-xl section-pad-compact">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
+      <div className="container-xl section-pad-compact footer-mobile">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 w-full">
 
           {/* Brand column */}
-          <div className="lg:w-72 shrink-0">
-            <Link href="/" className="flex items-center gap-2.5 mb-5">
-              <span className="brand-dot" style={{ width: 11, height: 11 }} />
-              <span className="font-bold text-[16px] tracking-tight" style={{ fontFamily: "'DM Sans', sans-serif", color: "var(--fg)" }}>
-                NexLoop
-              </span>
+          <div className="lg:w-72 shrink-0 w-full footer-brand-col footer-stack">
+            <Link href="/" className="footer-brand-link">
+              <span className="brand-dot footer-brand-icon" />
+              <span className="footer-brand-name">NexLoop</span>
             </Link>
             <p className="body-md max-w-xs hidden md:block">
-              Digital product agency. We build websites, mobile apps, and AI automation systems that grow your business — faster than you thought possible.
+              Digital product agency. We build websites, mobile apps, and AI automation systems that grow your business - faster than you thought possible.
             </p>
-            <div className="mt-6 space-y-2">
-              <a
-                href="mailto:team.nexloop@gmail.com"
-                className="flex items-center gap-2.5 body-sm transition-colors group"
-                style={{ color: "var(--fg-muted)" }}
-              >
-                <Mail size={13} className="shrink-0 group-hover:text-[var(--accent)] transition-colors" />
-                team.nexloop@gmail.com
-              </a>
-              <a
-                href="tel:+919511875269"
-                className="flex items-center gap-2.5 body-sm transition-colors group"
-                style={{ color: "var(--fg-muted)" }}
-              >
-                <Phone size={13} className="shrink-0 group-hover:text-[var(--accent)] transition-colors" />
-                +91 9511875269
-              </a>
-            </div>
+            <ul className="footer-contact-list">
+              <li>
+                <a href="mailto:team.nexloop@gmail.com" className="footer-contact-link group">
+                  <Mail size={14} className="footer-contact-icon group-hover:text-[var(--accent)] transition-colors" />
+                  <span>team.nexloop@gmail.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+919511875269" className="footer-contact-link group">
+                  <Phone size={14} className="footer-contact-icon group-hover:text-[var(--accent)] transition-colors" />
+                  <span>+91 9511875269</span>
+                </a>
+              </li>
+            </ul>
             {/* Socials */}
-            <div className="flex items-center gap-2.5 mt-6">
+            <div className="footer-socials">
               {socials.map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -166,9 +162,32 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+
+            {/* Blog links - mobile */}
+            <nav className="md:hidden w-full" aria-label="Blog articles">
+              <p className="label mb-3">From the blog</p>
+              <ul className="space-y-2.5">
+                {footerLinks.Blog.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      href={link.href}
+                      className="text-sm transition-colors"
+                      style={{ color: "var(--fg-muted)" }}
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <Link href="/blog" className="text-sm font-medium brand-text">
+                    View all articles →
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
 
-          {/* Links grid — desktop */}
+          {/* Links grid - desktop */}
           <div className="desktop-only flex-1 grid grid-cols-2 md:grid-cols-3 gap-8">
             {Object.entries(footerLinks).map(([cat, items]) => (
               <div key={cat}>
@@ -193,8 +212,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="divider mt-12 mb-6" />
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div className="divider mt-10 md:mt-12 mb-6" />
+        <div className="footer-bottom flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <p className="body-sm">© {new Date().getFullYear()} NexLoop. All rights reserved.</p>
           <p className="body-sm">Crafted with care in India 🇮🇳</p>
         </div>

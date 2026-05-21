@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Showcase from "@/components/Showcase";
 import HeroMarquee from "@/components/HeroMarquee";
@@ -6,8 +7,13 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
+import BlogPreview from "@/components/BlogPreview";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://nexloop.in" },
+};
 
 export default function Home() {
   return (
@@ -20,10 +26,9 @@ export default function Home() {
       <Portfolio />
       <Services />
       <About />
-      <div className="desktop-only">
-        <HowItWorks />
-      </div>
+      <HowItWorks />
       <Testimonials />
+      <BlogPreview />
       <CTA />
       <Footer />
     </main>
