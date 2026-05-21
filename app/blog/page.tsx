@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords: [
     "AI automation blog",
     "WhatsApp marketing automation",
-    "web design trends 2025",
+    "web design trends 2026",
     "lead generation strategies",
     "CRM automation guide",
     "digital agency blog India",
@@ -314,7 +314,7 @@ export default function BlogPage() {
                   Book a free 30-minute strategy call. We&apos;ll map out exactly which automations will 3x your leads.
                 </p>
                 <Link
-                  href="/#contact"
+                  href="/contact"
                   className="mt-7 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-sm font-bold transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
                   style={{ color: "var(--accent)" }}
                 >

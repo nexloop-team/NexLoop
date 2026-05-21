@@ -20,10 +20,7 @@ const nextConfig = {
       { source: "/index.html", destination: "/", permanent: true },
       { source: "/insights", destination: "/blog", permanent: true },
       { source: "/articles", destination: "/blog", permanent: true },
-      { source: "/contact", destination: "/#contact", permanent: true },
-      { source: "/portfolio", destination: "/#portfolio", permanent: true },
-      { source: "/services", destination: "/#services", permanent: true },
-      { source: "/about", destination: "/#about", permanent: true },
+      { source: "/portfolio", destination: "/work", permanent: true },
       {
         source: "/blog/web-design-trends-2025",
         destination: "/blog/web-design-trends-2026",

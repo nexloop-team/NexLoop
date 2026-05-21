@@ -7,23 +7,23 @@ import WhatsAppIcon, { WHATSAPP_URL } from "./WhatsAppIcon";
 
 const footerLinks = {
   Company: [
-    { label: "Services", href: "/#services" },
-    { label: "Process", href: "/#process" },
-    { label: "Reviews", href: "/#reviews" },
+    { label: "Work", href: "/work" },
+    { label: "Services", href: "/services" },
+    { label: "About", href: "/about" },
     { label: "Blog", href: "/blog" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "/contact" },
   ],
   Services: [
-    { label: "Website Development", href: "/#services" },
-    { label: "Mobile Apps", href: "/#services" },
-    { label: "AI Chatbots", href: "/#services" },
-    { label: "Lead Automation", href: "/#services" },
-    { label: "AI Voice Agents", href: "/#services" },
+    { label: "Website Development", href: "/services" },
+    { label: "Mobile Apps", href: "/services" },
+    { label: "AI Chatbots", href: "/services" },
+    { label: "Lead Automation", href: "/services" },
+    { label: "AI Voice Agents", href: "/services" },
   ],
   Blog: [
     { label: "AI Automation Guide", href: "/blog/ai-automation-guide-for-businesses" },
     { label: "WhatsApp Marketing", href: "/blog/whatsapp-marketing-automation" },
-    { label: "Web Design Trends", href: "/blog/web-design-trends-2025" },
+    { label: "Web Design Trends", href: "/blog/web-design-trends-2026" },
     { label: "Lead Gen Strategies", href: "/blog/lead-generation-strategies-ai" },
   ],
 };
@@ -92,7 +92,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-2.5 mt-6"
           >
-            <Link href="/#contact" className="btn-primary px-6 py-3 text-sm">
+            <Link href="/contact" className="btn-primary px-6 py-3 text-sm">
               <Sparkles size={14} />
               Start a project <ArrowUpRight size={14} />
             </Link>

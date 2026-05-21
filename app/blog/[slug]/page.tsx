@@ -248,7 +248,7 @@ export default function BlogPostPage({ params }: Props) {
                       {post.content.conclusion}
                     </p>
                     <Link
-                      href="/#contact"
+                      href="/contact"
                       className="btn-primary mt-5 text-sm px-7 py-3.5 inline-flex"
                     >
                       Book free consultation <ArrowUpRight size={14} />
@@ -279,7 +279,7 @@ export default function BlogPostPage({ params }: Props) {
                   <p className="body-sm mb-5">
                     Book a free 30-minute session. We&apos;ll build a custom plan for your business.
                   </p>
-                  <Link href="/#contact" className="btn-primary text-sm w-full py-3">
+                  <Link href="/contact" className="btn-primary text-sm w-full py-3">
                     Start free <ArrowUpRight size={13} />
                   </Link>
                 </div>

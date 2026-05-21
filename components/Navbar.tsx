@@ -12,11 +12,11 @@ import WhatsAppIcon, { WHATSAPP_URL } from "./WhatsAppIcon";
 type NavLink = { label: string; href: string; id: string; page?: boolean };
 
 const navLinks: NavLink[] = [
-  { label: "Work", href: "/#portfolio", id: "portfolio" },
-  { label: "Services", href: "/#services", id: "services" },
-  { label: "About", href: "/#about", id: "about" },
+  { label: "Work", href: "/work", id: "portfolio", page: true },
+  { label: "Services", href: "/services", id: "services", page: true },
+  { label: "About", href: "/about", id: "about", page: true },
   { label: "Blog", href: "/blog", id: "blog", page: true },
-  { label: "Contact", href: "/#contact", id: "contact" },
+  { label: "Contact", href: "/contact", id: "contact", page: true },
 ];
 
 export default function Navbar() {
@@ -111,7 +111,9 @@ export default function Navbar() {
             <div className={`nav-dock ${scrolled ? "nav-dock-scrolled" : ""}`}>
               {navLinks.map((link) => {
                 const isActive = link.page
-                  ? pathname.startsWith("/blog")
+                  ? link.href === "/blog"
+                    ? pathname.startsWith("/blog")
+                    : pathname === link.href
                   : pathname === "/" && link.id === activeSection;
                 return (
                   <Link
@@ -156,7 +158,7 @@ export default function Navbar() {
                 </motion.div>
               </AnimatePresence>
             </button>
-            <Link href="/#contact" className="btn-primary text-sm px-6 py-2.5 gap-1.5">
+            <Link href="/contact" className="btn-primary text-sm px-6 py-2.5 gap-1.5">
               Book a call <ArrowUpRight size={13} />
             </Link>
           </div>
@@ -243,7 +245,9 @@ export default function Navbar() {
               <nav className="flex flex-col gap-1 mb-4" aria-label="Mobile navigation">
                 {navLinks.map((link, i) => {
                   const isActive = link.page
-                  ? pathname.startsWith("/blog")
+                  ? link.href === "/blog"
+                    ? pathname.startsWith("/blog")
+                    : pathname === link.href
                   : pathname === "/" && link.id === activeSection;
                   return (
                     <motion.div
@@ -265,7 +269,7 @@ export default function Navbar() {
                   );
                 })}
               </nav>
-              <Link href="/#contact" onClick={() => setMobileOpen(false)} className="btn-primary w-full py-3.5 text-sm">
+              <Link href="/contact" onClick={() => setMobileOpen(false)} className="btn-primary w-full py-3.5 text-sm">
                 Book a call <ArrowUpRight size={13} />
               </Link>
             </motion.div>
