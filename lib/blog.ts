@@ -81,7 +81,7 @@ export const blogPosts: BlogPost[] = [
     coverIcon: "💬",
     tags: ["WhatsApp", "Marketing", "Automation", "India"],
     content: {
-      intro: "Email open rates hover around 20%. WhatsApp opens at 98%. If you're not using WhatsApp as a core part of your sales and marketing stack, you're fighting with one hand tied behind your back. Here's the complete playbook for automating WhatsApp in 2025.",
+      intro: "Email open rates hover around 20%. WhatsApp opens at 98%. If you're not using WhatsApp as a core part of your sales and marketing stack, you're fighting with one hand tied behind your back. Here's the complete playbook for automating WhatsApp in 2026.",
       sections: [
         {
           heading: "Why WhatsApp Is India's Best Sales Channel",
@@ -104,9 +104,9 @@ export const blogPosts: BlogPost[] = [
     },
   },
   {
-    slug: "web-design-trends-2025",
+    slug: "web-design-trends-2026",
     title: "Web Design Trends 2026: What Award-Winning Sites Are Doing Differently",
-    description: "From bento grids to scroll-triggered animations   here are the design patterns that separate average websites from conversion machines in 2025.",
+    description: "From bento grids to scroll-triggered animations   here are the design patterns that separate average websites from conversion machines in 2026.",
     category: "Design",
     author: "Atharva Deshmukh",
     authorRole: "Founder, NexLoop",
@@ -126,7 +126,7 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "2. Scroll-Triggered Animations",
-          body: "Static pages feel dead in 2025. Scroll-triggered animations   where elements gracefully fade, slide, or scale into view as users scroll   make your site feel alive and premium. The key is restraint: every animation should serve a purpose (revealing content at the right moment) not just look flashy. Libraries like Framer Motion make this achievable without performance sacrifice.",
+          body: "Static pages feel dead in 2026. Scroll-triggered animations   where elements gracefully fade, slide, or scale into view as users scroll   make your site feel alive and premium. The key is restraint: every animation should serve a purpose (revealing content at the right moment) not just look flashy. Libraries like Framer Motion make this achievable without performance sacrifice.",
         },
         {
           heading: "3. Hero Parallax Effects",
@@ -134,14 +134,14 @@ export const blogPosts: BlogPost[] = [
         },
         {
           heading: "4. Bold Typography as the Primary Visual",
-          body: "The era of safe, neutral typography is over. Award-winning sites use bold variable fonts with tight tracking, oversized numbers, and expressive typographic hierarchy to communicate personality and authority instantly. Fonts like Syne, Clash Display, and Neue Haas Grotesk are dominating premium design in 2025.",
+          body: "The era of safe, neutral typography is over. Award-winning sites use bold variable fonts with tight tracking, oversized numbers, and expressive typographic hierarchy to communicate personality and authority instantly. Fonts like Syne, Clash Display, and Neue Haas Grotesk are dominating premium design in 2026.",
         },
         {
           heading: "5. Dark/Light Mode as a Feature",
           body: "Offering both dark and light mode isn't just a nice-to-have   it signals that your product is polished and your team cares about detail. Users who engage with the theme toggle tend to spend 40% longer on site. It's a micro-interaction that builds trust.",
         },
       ],
-      conclusion: "Great web design in 2025 is about creating a feeling   premium, trustworthy, fast, intentional. Every pixel should earn its place. At NexLoop, we obsess over these details so your website does the selling for you. Ready to see what your site could look like? Let's talk.",
+      conclusion: "Great web design in 2026 is about creating a feeling   premium, trustworthy, fast, intentional. Every pixel should earn its place. At NexLoop, we obsess over these details so your website does the selling for you. Ready to see what your site could look like? Let's talk.",
     },
   },
   {
@@ -159,7 +159,7 @@ export const blogPosts: BlogPost[] = [
     coverIcon: "🎯",
     tags: ["Lead Generation", "AI", "Sales", "Conversion"],
     content: {
-      intro: "Most businesses have a lead generation problem that's actually a lead conversion problem. They get traffic, they get form submissions   but leads go cold, follow-ups get missed, and opportunities slip away. AI changes the entire equation. Here are 7 strategies that the most successful businesses in 2025 are using.",
+      intro: "Most businesses have a lead generation problem that's actually a lead conversion problem. They get traffic, they get form submissions   but leads go cold, follow-ups get missed, and opportunities slip away. AI changes the entire equation. Here are 7 strategies that the most successful businesses in 2026 are using.",
       sections: [
         {
           heading: "Strategy 1: Instant AI Response to Every Inquiry",
@@ -190,7 +190,7 @@ export const blogPosts: BlogPost[] = [
           body: "AI advertising optimization   letting Meta and Google's algorithms find your best customers based on your existing customer data   consistently outperforms manual targeting. Feed your AI the data (from your CRM), and let it find people who look exactly like your best clients.",
         },
       ],
-      conclusion: "Lead generation in 2025 isn't about working harder   it's about building systems that work while you sleep. At NexLoop, we design and implement exactly these systems for businesses across India. The average client goes from 5 to 20+ leads per week within the first 30 days. Want to see what's possible for your business? Start with a free strategy call.",
+      conclusion: "Lead generation in 2026 isn't about working harder   it's about building systems that work while you sleep. At NexLoop, we design and implement exactly these systems for businesses across India. The average client goes from 5 to 20+ leads per week within the first 30 days. Want to see what's possible for your business? Start with a free strategy call.",
     },
   },
   {
