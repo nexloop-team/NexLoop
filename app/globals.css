@@ -626,6 +626,28 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ════════════════ NAV ════════════════ */
+.site-header {
+  padding: 8px 0;
+}
+.site-header.site-header-scrolled {
+  padding: 5px 0;
+}
+.nav-actions .theme-toggle {
+  width: 32px;
+  height: 32px;
+}
+.nav-cta {
+  font-size: 0.8125rem;
+}
+.nav-menu-toggle {
+  width: 34px;
+  height: 34px;
+}
+@media (max-width: 767px) {
+  .nav-mobile-panel {
+    top: 52px;
+  }
+}
 .glass-nav {
   background: var(--nav-bg);
   backdrop-filter: blur(32px) saturate(180%);
@@ -634,8 +656,8 @@ a { color: inherit; text-decoration: none; }
   box-shadow: var(--shadow-s);
 }
 .nav-dock {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 8px 10px; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 5px 8px; border-radius: 999px;
   background: color-mix(in srgb, var(--bg-card) 82%, transparent);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-m);
@@ -795,7 +817,6 @@ a { color: inherit; text-decoration: none; }
   .footer-mobile .footer-stack .footer-socials {
     margin-top: 0;
   }
-  .footer-mobile .footer-brand-link,
   .footer-mobile .footer-contact-link {
     display: grid;
     grid-template-columns: 1.125rem 1fr;
@@ -810,19 +831,10 @@ a { color: inherit; text-decoration: none; }
     line-height: 1.5;
   }
   .footer-mobile .footer-brand-link {
-    color: var(--fg);
-  }
-  .footer-mobile .footer-brand-icon {
-    width: 11px;
-    height: 11px;
-    justify-self: center;
-  }
-  .footer-mobile .footer-brand-name {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--fg);
+    display: inline-flex;
+    width: auto;
+    margin: 0;
+    padding: 0;
   }
   .footer-mobile .footer-contact-list {
     list-style: none;
@@ -888,18 +900,43 @@ a { color: inherit; text-decoration: none; }
 .footer-brand-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
+  flex-shrink: 0;
 }
-.footer-brand-icon {
-  width: 11px;
-  height: 11px;
+.footer-brand-logo-wrap {
+  flex-shrink: 0;
+  height: 32px;
+  width: 138px;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
 }
-.footer-brand-name {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--fg);
+@media (min-width: 768px) {
+  .footer-brand-logo-wrap { height: 36px; width: 160px; }
+}
+.footer-brand-logo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: block;
+  height: 36px;
+  width: auto;
+  max-width: none;
+  background: transparent;
+  transform: translateY(-50%) translateX(-6px) scale(4.2);
+  transform-origin: left center;
+}
+[data-theme="light"] .footer-brand-link .footer-brand-logo {
+  filter: invert(1) brightness(0.1);
+}
+[data-theme="dark"] .footer-brand-link .footer-brand-logo {
+  filter: none;
+}
+@media (max-width: 767px) {
+  .footer-brand-logo-wrap { height: 28px; width: 124px; }
+  .footer-brand-logo {
+    height: 30px;
+    transform: translateY(-50%) translateX(-5px) scale(3.4);
+  }
 }
 .footer-contact-list {
   list-style: none;

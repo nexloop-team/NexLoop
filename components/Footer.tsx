@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, ArrowUpRight, Twitter, Linkedin, Instagram, Sparkles } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import WhatsAppIcon, { WHATSAPP_URL } from "./WhatsAppIcon";
 
 const footerLinks = {
@@ -109,9 +110,17 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:w-72 shrink-0 w-full footer-brand-col footer-stack">
-            <Link href="/" className="footer-brand-link">
-              <span className="brand-dot footer-brand-icon" />
-              <span className="footer-brand-name">NexLoop</span>
+            <Link href="/" className="footer-brand-link" aria-label="NexLoop Home">
+              <div className="footer-brand-logo-wrap">
+                <Image
+                  src="/logo1.png"
+                  alt="NexLoop"
+                  width={200}
+                  height={48}
+                  sizes="160px"
+                  className="logo-mark footer-brand-logo"
+                />
+              </div>
             </Link>
             <p className="body-md max-w-xs hidden md:block">
               Digital product agency. We build websites, mobile apps, and AI automation systems that grow your business - faster than you thought possible.

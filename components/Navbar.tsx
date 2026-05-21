@@ -89,8 +89,7 @@ export default function Navbar() {
         initial={{ y: -90, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.55, ease: [0.23, 1, 0.32, 1] }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-nav" : ""}`}
-        style={{ padding: scrolled ? "10px 0" : "16px 0" }}
+        className={`site-header fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "site-header-scrolled glass-nav" : ""}`}
       >
         <div className="container-xl flex items-center justify-between gap-3">
           <Link href="/" className="nav-brand group" aria-label="NexLoop Home">
@@ -119,7 +118,7 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`nav-link px-4 py-2 text-sm font-medium rounded-full relative ${isActive ? "active" : ""}`}
+                    className={`nav-link px-3 py-1.5 text-sm font-medium rounded-full relative ${isActive ? "active" : ""}`}
                   >
                     {isActive && (
                       <motion.span
@@ -135,7 +134,7 @@ export default function Navbar() {
             </div>
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2.5 nav-actions">
             <a
               href={WHATSAPP_URL}
               target="_blank"
@@ -158,28 +157,27 @@ export default function Navbar() {
                 </motion.div>
               </AnimatePresence>
             </button>
-            <Link href="/contact" className="btn-primary text-sm px-6 py-2.5 gap-1.5">
+            <Link href="/contact" className="btn-primary nav-cta text-sm px-5 py-2 gap-1.5">
               Book a call <ArrowUpRight size={13} />
             </Link>
           </div>
 
-          <div className="md:hidden flex items-center gap-1.5 shrink-0">
+          <div className="md:hidden flex items-center gap-1.5 shrink-0 nav-actions">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="theme-toggle"
-              style={{ width: 34, height: 34 }}
               aria-label="Chat on WhatsApp"
             >
               <WhatsAppIcon size={14} />
             </a>
-            <button onClick={toggleTheme} className="theme-toggle" style={{ width: 34, height: 34 }} aria-label="Toggle theme">
+            <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
               {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
             </button>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="w-10 h-10 flex items-center justify-center rounded-full transition-colors"
+              className="nav-menu-toggle flex items-center justify-center rounded-full transition-colors"
               style={{
                 color: "var(--fg)",
                 background: mobileOpen ? "var(--bg-elevated)" : "transparent",
@@ -221,7 +219,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -16, scale: 0.97 }}
               transition={{ duration: 0.28, ease: [0.23, 1, 0.32, 1] }}
-              className="fixed top-[76px] left-4 right-4 z-50 rounded-2xl p-5 md:hidden max-h-[calc(100dvh-5.5rem)] overflow-y-auto"
+              className="nav-mobile-panel fixed left-4 right-4 z-50 rounded-2xl p-5 md:hidden max-h-[calc(100dvh-5.5rem)] overflow-y-auto"
               style={{
                 background: "var(--bg-card)",
                 border: "1px solid var(--border)",
