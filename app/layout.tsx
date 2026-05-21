@@ -12,21 +12,26 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexloop.in"),
-  title: "NexLoop | Website Design Studio - Websites, Apps & AI",
+  title: {
+    default: "NexLoop | Best Website Design & Development Agency in India",
+    template: "%s | NexLoop",
+  },
   description:
-    "We design websites and digital products that earn trust. Custom Next.js sites, mobile apps & AI automation - fast delivery, no templates.",
+    "NexLoop is a website design and development agency in India. Custom Next.js websites, mobile apps, and AI automation from expert web designers - fast delivery, no templates.",
   keywords: [
+    "best website designer",
+    "best website design agency",
+    "website development agency",
+    "web development agency India",
+    "best web development company",
+    "custom website designer",
     "website design studio",
-    "website development",
-    "Next.js website",
-    "custom website design",
-    "web design India",
-    "mobile app development",
-    "digital product studio",
+    "Next.js website development",
+    "professional website designer India",
+    "mobile app development agency",
     "conversion-focused web design",
     "WhatsApp automation",
-    "AI chatbot",
-    "business automation",
+    "AI chatbot development",
   ],
   authors: [{ name: "NexLoop", url: "https://nexloop.in" }],
   creator: "NexLoop",
@@ -52,16 +57,16 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://nexloop.in",
     siteName: "NexLoop",
-    title: "NexLoop | Website Design Studio - Websites, Apps & AI",
+    title: "NexLoop | Best Website Design & Development Agency in India",
     description:
-      "We design websites and digital products that earn trust. Custom Next.js sites, mobile apps & AI automation - fast delivery, no templates.",
+      "NexLoop is a website design and development agency in India. Custom Next.js websites, mobile apps, and AI automation from expert web designers - fast delivery, no templates.",
     locale: "en_US",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "NexLoop - Website design studio for websites, apps & AI automation",
+        alt: "NexLoop - Best website design and development agency in India",
       },
     ],
   },
@@ -69,9 +74,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@nexloopapp",
     creator: "@nexloopapp",
-    title: "NexLoop | Website Design Studio - Websites, Apps & AI",
+    title: "NexLoop | Best Website Design & Development Agency in India",
     description:
-      "We design websites and digital products that earn trust. Custom Next.js sites, mobile apps & AI automation - fast delivery, no templates.",
+      "NexLoop is a website design and development agency in India. Custom Next.js websites, mobile apps, and AI automation from expert web designers - fast delivery, no templates.",
     images: ["/og-image.png"],
   },
 };
@@ -83,7 +88,7 @@ const organizationSchema = {
   url: "https://nexloop.in",
   logo: "https://nexloop.in/icon1.png",
   description:
-    "NexLoop is a website design and development studio building minimal, high-converting sites and digital products with Next.js.",
+    "NexLoop is a website design and development agency in India building custom Next.js websites, mobile apps, and AI automation for growing businesses.",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer service",
@@ -96,6 +101,15 @@ const organizationSchema = {
     "https://linkedin.com/company/nexloop",
     "https://instagram.com/nexloopapp",
   ],
+  knowsAbout: [
+    "Website Design",
+    "Website Development",
+    "Web Design Agency",
+    "Mobile App Development",
+    "Next.js Development",
+    "UI/UX Design",
+    "AI Automation",
+  ],
 };
 
 const websiteSchema = {
@@ -104,7 +118,7 @@ const websiteSchema = {
   name: "NexLoop",
   url: "https://nexloop.in",
   description:
-    "Website design studio building custom Next.js websites, mobile apps, and AI automation for growing businesses.",
+    "Best website design and development agency in India. Custom Next.js websites, mobile apps, and AI automation by NexLoop.",
   publisher: {
     "@type": "Organization",
     name: "NexLoop",
@@ -115,11 +129,17 @@ const websiteSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "NexLoop - Website Design & Development",
+  name: "NexLoop - Website Design & Development Agency",
   url: "https://nexloop.in",
   description:
-    "NexLoop designs and builds minimal, high-converting websites and digital products with Next.js, plus mobile apps and automation when you need them.",
-  areaServed: "Worldwide",
+    "Award-quality website design and development agency in India. Custom Next.js sites, mobile apps, and business automation for brands that want to grow online.",
+  areaServed: { "@type": "Country", name: "India" },
+  serviceType: [
+    "Website design",
+    "Website development",
+    "Web development agency",
+    "Mobile app development",
+  ],
   provider: {
     "@type": "Organization",
     name: "NexLoop",

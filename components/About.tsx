@@ -41,8 +41,8 @@ export default function About() {
               <span className="brand-text">clarity and craft</span>.
             </h2>
             <p className="body-lg mt-4 max-w-lg hidden md:block" style={{ color: "var(--fg-secondary)" }}>
-              NexLoop is a design-led team building websites and digital products for businesses
-              that need to look credible immediately. We combine product thinking, clean engineering,
+              NexLoop is a website design and development agency helping businesses look credible
+              online from day one. We combine product thinking, custom Next.js engineering,
               and automation where it actually saves time.
             </p>
             <p className="body-md mt-3 md:hidden" style={{ color: "var(--fg-secondary)" }}>

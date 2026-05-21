@@ -12,6 +12,9 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
+  title: "Best Website Design & Development Agency in India",
+  description:
+    "Hire NexLoop for custom website design and development. Top web design agency in India for Next.js sites, mobile apps, and AI automation that convert visitors into leads.",
   alternates: { canonical: "https://nexloop.in" },
 };
 
