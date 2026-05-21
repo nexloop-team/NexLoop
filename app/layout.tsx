@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "sw
 export const metadata: Metadata = {
   metadataBase: new URL("https://nexloop.in"),
   title: {
-    default: "NexLoop | Best Website Design & Development Agency in India",
+    default: "NexLoop",
     template: "%s | NexLoop",
   },
   description:
