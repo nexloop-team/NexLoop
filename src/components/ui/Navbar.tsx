@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
@@ -48,8 +49,8 @@ export function Navbar() {
       <div className="flex w-full items-center justify-between gap-x-6 sm:gap-x-12">
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-2.5">
-          <div className="flex h-[22px] w-[22px] items-center justify-center rounded-full border border-foreground/20 text-[8px] font-medium tracking-wider text-foreground/60 transition-colors duration-500 group-hover:border-foreground/40 group-hover:text-foreground">
-            N
+          <div className="flex h-9.5 w-9.5 items-center justify-center rounded-full border border-foreground/20 overflow-hidden transition-colors duration-500 group-hover:border-foreground/40">
+            <Image src="/nexloop-logo.svg" alt="NexLoop Logo" width={55} height={55} className="object-contain" />
           </div>
           <span className="text-[11px] font-medium uppercase tracking-[0.22em] text-foreground/80 transition-colors duration-500 group-hover:text-foreground">
             NexLoop
