@@ -71,7 +71,7 @@ export function Navbar() {
           <div className="group relative">
             <div className="pointer-events-none absolute inset-0 -m-1 rounded-full bg-white opacity-40 blur-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-m-1.5 group-hover:opacity-60 group-hover:blur-2xl" />
             <a
-              href="#contact"
+              href="/contact"
               className="relative z-10 inline-flex h-8 items-center justify-center rounded-full bg-white px-5 text-[9.5px] font-bold uppercase tracking-[0.2em] text-black transition-all duration-500 hover:scale-[1.03]"
             >
               Book a Call
@@ -137,7 +137,7 @@ export function Navbar() {
                   <div className="group relative w-full">
                     <div className="pointer-events-none absolute inset-0 -m-1 rounded-full bg-white opacity-40 blur-xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-m-1.5 group-hover:opacity-60 group-hover:blur-2xl" />
                     <a
-                      href="#contact"
+                      href="/contact"
                       onClick={() => setIsOpen(false)}
                       className="relative z-10 flex h-10 w-full items-center justify-center rounded-full bg-white px-6 text-[10px] font-bold uppercase tracking-[0.2em] text-black transition-all duration-500 hover:scale-[1.03]"
                     >
