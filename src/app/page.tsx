@@ -1,6 +1,36 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { FeaturedWork } from "@/components/sections/FeaturedWork";
 import { CTASection } from "@/components/sections/CTASection";
+
+export const metadata: Metadata = {
+  title: "NexLoop | AI Automation, Websites & Mobile Apps",
+  description:
+    "NexLoop builds websites, mobile apps, AI automation systems, AI chatbots, voice agents, and business automation solutions for growing businesses.",
+  alternates: {
+    canonical: "https://nexloop.in",
+  },
+  openGraph: {
+    title: "NexLoop | AI Automation, Websites & Mobile Apps",
+    description:
+      "NexLoop builds websites, mobile apps, AI automation systems, AI chatbots, voice agents, and business automation solutions for growing businesses.",
+    url: "https://nexloop.in",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "NexLoop – AI Automation, Websites & Mobile Apps",
+      },
+    ],
+  },
+  twitter: {
+    title: "NexLoop | AI Automation, Websites & Mobile Apps",
+    description:
+      "NexLoop builds websites, mobile apps, AI automation systems, AI chatbots, voice agents, and business automation solutions for growing businesses.",
+    images: ["/images/og-image.png"],
+  },
+};
 
 export default function Home() {
   return (

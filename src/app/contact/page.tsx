@@ -1,11 +1,34 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { ContactHero } from "@/components/contact/contact-hero";
 import { ContactForm } from "@/components/contact/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact Us | NexLoop",
+  title: "Book a Strategy Call | NexLoop",
   description:
-    "Book a free strategy call with NexLoop. Tell us about your business, project, or automation goals and we'll help you identify the fastest path to growth.",
+    "Book a free strategy call with NexLoop. Tell us about your business goals, website, app, or AI automation needs and we'll map out the fastest path to growth.",
+  alternates: {
+    canonical: "https://nexloop.in/contact",
+  },
+  openGraph: {
+    title: "Book a Strategy Call | NexLoop",
+    description:
+      "Book a free strategy call with NexLoop. Tell us about your business goals, website, app, or AI automation needs and we'll map out the fastest path to growth.",
+    url: "https://nexloop.in/contact",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact NexLoop – Book a Strategy Call",
+      },
+    ],
+  },
+  twitter: {
+    title: "Book a Strategy Call | NexLoop",
+    description:
+      "Book a free strategy call with NexLoop. Tell us about your business goals, website, app, or AI automation needs and we'll map out the fastest path to growth.",
+    images: ["/images/og-image.png"],
+  },
 };
 
 export default function ContactPage() {

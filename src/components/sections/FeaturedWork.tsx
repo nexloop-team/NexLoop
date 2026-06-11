@@ -1,123 +1,121 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { EASE_OUT_EXPO } from "@/lib/motion";
 
 const projects = [
   {
     id: 1,
-    title: "AI Voice Agent Platform",
-    description: "Automated inbound and outbound customer conversations.",
-    // Premium abstract tech imagery
-    image:
-      "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1600&auto=format&fit=crop",
+    title: "Vighnaharta Engineers",
+    description: "Corporate website designed and developed for a precision manufacturing company in Pune. Focused on credibility, lead generation, and professional presentation.",
+    tags: ["Website Design", "Next.js", "Business Website"],
+    image: "/images/work/vighnaharta.jpg",
+    alt: "Vighnaharta Engineers corporate website designed and developed by NexLoop",
+    link: "https://www.vighanahartaengineers.in/"
   },
   {
     id: 2,
-    title: "Healthcare Appointment System",
-    description: "AI-powered patient scheduling and reminders.",
-    // Premium abstract light/clean imagery
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1600&auto=format&fit=crop",
-  },
-  {
-    id: 3,
-    title: "WhatsApp Automation Suite",
-    description: "Lead capture and customer engagement automation.",
-    // Premium dark abstract imagery
-    image:
-      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1600&auto=format&fit=crop",
-  },
-  {
-    id: 4,
-    title: "Custom SaaS Dashboard",
-    description: "Business intelligence and workflow management.",
-    // Premium interface/data abstract imagery
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
-  },
+    title: "DTBM",
+    description: "Modern landing page experience focused on bold typography, storytelling, and immersive design aesthetics.",
+    tags: ["Frontend", "Next.js", "Creative Design"],
+    image: "/images/work/dtbm.jpg",
+    alt: "DTBM landing page designed and developed by NexLoop",
+    link: "https://dtbm.vercel.app/"
+  }
 ];
 
 export function FeaturedWork() {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section
-      id="work"
-      className="relative overflow-hidden bg-background/50 peerly-blurred backdrop-blur-sm py-40 sm:py-28 lg:py-46"
-    >
-      <div className="relative z-10 mx-auto max-w-[96rem] px-6 sm:px-10 lg:px-24">
-        {/* ── Section Header ───────────────────────────────────── */}
-        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+    <section id="work" className="relative z-10 w-full overflow-hidden bg-transparent py-24">
+      <div className="mx-auto max-w-[96rem] px-6 sm:px-10 lg:px-14">
+        
+        {/* Section Header */}
+        <div className="mb-16 flex flex-col gap-6 sm:mb-24 lg:flex-row lg:items-end lg:justify-between">
           <motion.div
             initial={shouldReduceMotion ? false : { opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, ease: EASE_OUT_EXPO }}
+            className="flex flex-col gap-4"
           >
-            <div className="mb-4 flex items-center justify-between sm:mb-6">
-              <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-label-foreground">
-                Featured Work
-              </span>
-            </div>
+            <span className="text-[10px] font-medium uppercase tracking-[0.3em] text-label-foreground">
+              Selected Work
+            </span>
+            <h2 className="max-w-[600px] text-2xl font-medium tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+              A small selection of projects we&apos;ve designed and developed.
+            </h2>
           </motion.div>
-
-          <motion.h2
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2, delay: 0.1, ease: EASE_OUT_EXPO }}
-            className="text-balance text-[1.5rem] font-light uppercase leading-[1.3] tracking-[0.05em] text-foreground sm:text-3xl md:text-4xl lg:text-[2.75rem]"
-          >
-            We create AI systems, websites, mobile apps, and automation
-            experiences that help businesses scale.
-          </motion.h2>
         </div>
 
-        {/* ── Projects Grid ────────────────────────────────────── */}
-        <div className="mt-28 grid grid-cols-1 gap-y-16 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-20 lg:mt-36 lg:gap-x-12 xl:gap-x-16">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-12 xl:gap-16">
           {projects.map((project, idx) => (
-            <motion.a
+            <motion.div
               key={project.id}
-              href="#"
-              className="group flex flex-col transition-transform duration-[0.8s] ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-3"
-              initial={shouldReduceMotion ? false : { opacity: 0, y: 40 }}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{
-                duration: 1.2,
+                duration: 1,
                 delay: shouldReduceMotion ? 0 : 0.1 * (idx % 2),
                 ease: EASE_OUT_EXPO,
               }}
+              className="group flex flex-col"
             >
-              {/* Image Container */}
-              <div className="relative mb-6 overflow-hidden rounded-[20px] bg-surface/30 aspect-[4/3] sm:mb-8">
-                {/* Subtle Inner Border for Premium Edge */}
-                <div className="absolute inset-0 z-10 rounded-[20px] border border-foreground/5 transition-colors duration-500 group-hover:border-foreground/15 pointer-events-none" />
-                
-                {/* Overlay shadow to integrate image with dark background */}
-                <div className="absolute inset-0 z-[1] bg-black/10 transition-opacity duration-500 group-hover:bg-black/0 pointer-events-none" />
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-foreground/[0.02] p-4 backdrop-blur-md transition-all duration-500 hover:border-foreground/20 hover:bg-foreground/[0.04] sm:p-6"
+              >
+                {/* Image Container */}
+                <div className="relative mb-8 aspect-[16/10] overflow-hidden rounded-2xl bg-black/20">
+                  <div className="pointer-events-none absolute inset-0 z-10 rounded-2xl border border-white/5" />
+                  <Image
+                    src={project.image}
+                    alt={project.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-[1s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
 
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
+                {/* Project Meta */}
+                <div className="flex flex-1 flex-col px-2 pb-2">
+                  {/* Tags */}
+                  <div className="mb-6 flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-border bg-foreground/[0.05] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.15em] text-label-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-              {/* Project Meta */}
-              <div className="mt-6 flex flex-col gap-2 px-1">
-                <h3 className="text-[13px] font-medium uppercase tracking-[0.08em] text-foreground transition-colors duration-300 group-hover:text-foreground sm:text-[15px]">
-                  {project.title}
-                </h3>
-                <p className="text-[12px] font-light tracking-wide text-muted-foreground sm:text-[13.5px]">
-                  {project.description}
-                </p>
-              </div>
-            </motion.a>
+                  {/* Title & Description */}
+                  <h3 className="mb-3 text-2xl font-medium tracking-tight text-foreground sm:text-3xl">
+                    {project.title}
+                  </h3>
+                  <p className="mb-8 max-w-lg text-[15px] font-light leading-[1.8] text-muted-foreground">
+                    {project.description}
+                  </p>
+
+                  {/* Button */}
+                  <div className="mt-auto flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.15em] text-foreground transition-colors group-hover:text-muted-foreground">
+                    Visit Website <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                  </div>
+                </div>
+              </a>
+            </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

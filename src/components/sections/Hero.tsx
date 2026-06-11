@@ -112,7 +112,7 @@ export function Hero() {
             {/* Button */}
             <a
               href="/contact"
-              className="relative z-10 inline-flex h-[56px] items-center justify-center rounded-full border border-white/20 bg-white/5 px-10 text-[11px] font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-xl transition-all duration-500 hover:scale-[1.02] hover:bg-white/10"
+              className="relative z-10 inline-flex h-[56px] items-center justify-center rounded-full border border-border bg-foreground/[0.03] px-10 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground backdrop-blur-xl transition-all duration-500 hover:scale-[1.02] hover:bg-foreground/[0.08]"
             >
               Book a Call
             </a>
