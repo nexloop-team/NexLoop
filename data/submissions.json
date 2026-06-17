@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Nikhil ",
+    "company": "sdf",
+    "email": "om@wer",
+    "phone": "1231231231231231",
+    "interest": "ai-automation",
+    "details": "dsfsdf",
+    "createdAt": "2026-06-17T03:46:51.177Z"
+  },
+  {
+    "name": "adsfasd",
+    "company": "asdf",
+    "email": "asdfas@asdf",
+    "phone": "234234234",
+    "interest": "ai-automation",
+    "details": "asdfasfasdfasf",
+    "createdAt": "2026-06-17T03:48:02.296Z"
+  },
+  {
+    "name": "qwe",
+    "company": "ssfd",
+    "email": "sdf@sdf",
+    "phone": "12312312312",
+    "interest": "ai-automation",
+    "details": "sdfsdfsdf",
+    "createdAt": "2026-06-17T03:49:40.171Z"
+  }
+]

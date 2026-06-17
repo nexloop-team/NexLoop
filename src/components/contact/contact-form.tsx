@@ -7,15 +7,41 @@ import { EASE_OUT_EXPO } from "@/lib/motion";
 export function ContactForm() {
   const shouldReduceMotion = useReducedMotion();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [name, setName] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [interest, setInterest] = useState("");
+  const [details, setDetails] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate submission for now
-    setTimeout(() => {
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, company, email, phone, interest, details }),
+      });
+
+      if (!res.ok) throw new Error("Network response was not ok");
+
+      setSubmitted(true);
+      setName("");
+      setCompany("");
+      setEmail("");
+      setPhone("");
+      setInterest("");
+      setDetails("");
+    } catch (err) {
+      console.error(err);
+      alert("There was an error submitting the form. Please try again.");
+    } finally {
       setIsSubmitting(false);
-      alert("Form submitted successfully!");
-    }, 1500);
+    }
   };
 
   const inputClasses =
@@ -43,6 +69,8 @@ export function ContactForm() {
               id="name"
               required
               placeholder="John Doe"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className={inputClasses}
             />
           </div>
@@ -56,6 +84,8 @@ export function ContactForm() {
               type="text"
               id="company"
               placeholder="Acme Corp"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
               className={inputClasses}
             />
           </div>
@@ -72,6 +102,8 @@ export function ContactForm() {
               id="email"
               required
               placeholder="john@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className={inputClasses}
             />
           </div>
@@ -85,6 +117,8 @@ export function ContactForm() {
               type="tel"
               id="phone"
               placeholder="+1 (555) 000-0000"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
               className={inputClasses}
             />
           </div>
@@ -99,7 +133,8 @@ export function ContactForm() {
             <select
               id="interest"
               required
-              defaultValue=""
+              value={interest}
+              onChange={(e) => setInterest(e.target.value)}
               className={`${inputClasses} appearance-none [&>option]:bg-background [&>option]:text-foreground`}
             >
               <option value="" disabled hidden>
@@ -122,33 +157,6 @@ export function ContactForm() {
           </div>
         </div>
 
-        {/* Budget */}
-        <div>
-          <label htmlFor="budget" className={labelClasses}>
-            Project Budget
-          </label>
-          <div className="relative">
-            <select
-              id="budget"
-              defaultValue=""
-              className={`${inputClasses} appearance-none [&>option]:bg-background [&>option]:text-foreground`}
-            >
-              <option value="" disabled hidden>
-                Select a budget range
-              </option>
-              <option value="under-1k">Under $1,000</option>
-              <option value="1k-5k">$1,000 – $5,000</option>
-              <option value="5k-10k">$5,000 – $10,000</option>
-              <option value="10k-plus">$10,000+</option>
-            </select>
-            <div className="pointer-events-none absolute inset-y-0 right-5 flex items-center text-label-foreground">
-              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19 9l-7 7-7-7" />
-              </svg>
-            </div>
-          </div>
-        </div>
-
         {/* Details */}
         <div>
           <label htmlFor="details" className={labelClasses}>
@@ -159,6 +167,8 @@ export function ContactForm() {
             required
             rows={5}
             placeholder="Tell us a bit about your project..."
+            value={details}
+            onChange={(e) => setDetails(e.target.value)}
             className={`${inputClasses} resize-none`}
           />
         </div>
@@ -174,7 +184,7 @@ export function ContactForm() {
               disabled={isSubmitting}
               className="relative z-10 flex h-12 w-full items-center justify-center rounded-full border border-foreground/20 bg-foreground/5 px-8 text-[11px] font-medium uppercase tracking-[0.2em] text-foreground/80 transition-all duration-500 hover:border-foreground/40 hover:bg-foreground/10 hover:text-foreground disabled:opacity-50 sm:w-auto sm:px-12"
             >
-              {isSubmitting ? "Sending..." : "Book Strategy Call"}
+              {isSubmitting ? "Sending..." : submitted ? "Sent" : "Book Strategy Call"}
             </button>
           </div>
         </div>
