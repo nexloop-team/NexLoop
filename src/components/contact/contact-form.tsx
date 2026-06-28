@@ -21,13 +21,42 @@ export function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("/api/contact", {
+      const formData = new FormData();
+      formData.append("name", name);
+      formData.append("company", company);
+      formData.append("email", email);
+      formData.append("phone", phone);
+      formData.append("interest", interest);
+      formData.append("details", details);
+
+      const res = await fetch("https://formspree.io/f/xlgynpzw", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, company, email, phone, interest, details }),
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
       });
 
-      if (!res.ok) throw new Error("Network response was not ok");
+      console.log("Formspree Response Status:", res.status);
+      console.log("Formspree Response StatusText:", res.statusText);
+
+      if (!res.ok) {
+        const contentType = res.headers.get("content-type");
+        let errorData;
+        
+        if (contentType?.includes("application/json")) {
+          errorData = await res.json();
+          console.log("Formspree JSON Error Response:", errorData);
+        } else {
+          errorData = await res.text();
+          console.log("Formspree Text Error Response:", errorData);
+        }
+        
+        throw new Error(`Formspree error (${res.status}): ${JSON.stringify(errorData)}`);
+      }
+
+      const responseData = await res.json();
+      console.log("Formspree Success Response:", responseData);
 
       setSubmitted(true);
       setName("");
